@@ -1,0 +1,135 @@
+Changelog
+
+## 0.54 ##
+- Added support to z64hdr's new update
+
+## 0.53 ##
+- Added checkbox to compile with z64hdr and an option to download its repo
+- Updated nOvl version
+- Fixed an issue where github repos failed to download sometimes
+- Fixed an issue where saving settings would sometimes give an error
+- Fixed an issue where the first compile after downloading the tool would always fail
+- Added option to port 1.0 asm actors to debug (only jal's are ported)
+- C warnings and z64hdr checkboxes can be saved for next sesions by clicking "save settings"
+
+## 0.51 ##
+- Separated download z64ovl github into 2 different ones, old and new one
+- Removed some debugging leftover in the Help tab
+- Fixed a bug where you couldn't use object tab in zzrpl mode
+
+## 0.50 ##
+- Added a way to open zzrp/zzrpl projects directly, skipping the need to open a ROM. It will also appear in recent files.
+- Added path information after sending to zzrp
+- Fixed a bug where 0 initialized variables could be lost on compilation w/ nOVL (thanks z64me)
+- Fixed a bug where the program could give an error depending on the zzrpl path when saving to zzrpl
+- Fixed a bug where sending objects to zzrp project didn't included .zzrpl extension
+- Fixed a bug where injecting object could be clicked without any object opened resulting in a crash
+
+## 0.48 ##
+- Init vars detection is now more accurate
+- Added allocation field
+- Fixed a bug where zzromtool button wasn't doing what was supposed to do with actors, also indicates where the init vars are automatically and supports Link overlay
+- .zzrpl extension is now supported too
+- Overlays can now be compiled with deadbeef words (optional)
+- Updating z64ovl no longer requires restarting the tool, and can't randomly crash explorer.exe on win10 anymore
+- Link and pause menu dissasembles now have properly named main functions
+- Link and pause menu can now be compiled from a .c file
+
+
+## 0.46 ##
+- Added settings tab and the ability to change compile flags inside the program (or in Settings.xml)
+- Added tool to copy animations from one zobj to another
+
+## 0.45 ##
+- Pause menu (kaleidoscope) overlay fully supported!
+- Added feature to print all texture offsets from a zmap/zobj
+- Added fields to control DMA updates
+- Added buttons to support .zzrp projects
+- Changed the UI so it mentions the support of non-actor files
+- Fixed an issue with paths having spaces on it (hopefully)
+
+## 0.42 ##
+
+- Added checkbox to disable warning
+- Lowest value of vram is now 80000000
+- Object number uncapped
+- Fixed an issue where C actors with compile errors were not detected correctly
+- Fixed autoupdater
+
+## 0.41 ##
+
+- Autoupdater now uses a different server
+- Changed the compiling flags of .C actors
+
+## 0.40 ##
+
+- Added support to actors written in C
+- Added credits to z64me and CrookedPoe
+- Added button to download z64ovl from repo
+- Fixed an issue where actor id was still capped to 0x01D6
+- Updated function xml
+- "Please wait" message now disappears as it should
+
+## 0.34 ##
+
+- Now allows to enter any actor id instead of being capped to 0x01D6
+- CRC calculation is now done by the tool itself to avoid issues with windows rights
+- Added an option to convert a file into a mips array
+- Clear dma table button now works for all roms, not just debug
+- Link can now be decompiled and compiled on all versions, its treated as actor 0 by the tool. Remember to press "Find empty VRAM" button before compiling. Due to certain compilations, the output overlay will always be 0x10 bytes bigger than the original, so find a different rom offset.
+- Added an option to convert actors from debug to 1.0. All it does is replacing the documented jal offsets so you still need to do some work.
+
+## 0.33 ##
+
+- Upgraded atom version, includes better padding and different format regarding variables
+- Added support to MM U 1.0
+
+## 0.32 ##
+
+- Added Random Drop Table editor, only OOT for now
+- Console output is now much more clean, you will only see gcc and novl errors instead of all the .bat commands
+- Fixed a crash regarding source files without extension or with non .S extension, gcc will output error with invalid extensions though
+
+
+## 0.31 ##
+
+- Environment vars are no longer required
+- Removed zovldis (no reason to exists since we have Atom)
+- MM function XML now contains all undocumented functions used by actors in blank, like the OoT xml
+- When compiling, you now get a success message in the console
+- Fixed a bug regarding having dots in the directory of the overlay
+
+## 0.30 ##
+
+- ROM data is no longer stored in cache (caused major issues)
+- Added a friendly button to automatically set environment vars
+- Added a few more OoT jal descriptions
+- VRam offset is now labeled as OPTIONAL (pointed by Ideka)
+- Added MM J support to both decompile and compile, as well as 21 jal descriptions (afaik this is the only MM version viable due to lack of documentation, don't ask for others)
+NOTE: Decompiling actors with MM J takes around 20 sec since it uses the all command instead of the df command
+
+## 0.22 ##
+
+- Fixed a bug where some actors couldn't be recompiled due to a failure in the init vars detection
+- Slightly additions in functions xml
+- Removed individual credits from functions xml to prevent future polemics
+
+## 0.21 ##
+
+- Fixed a bug where the folder couldn't contain "." character
+- Fixed a bug where you could not compile an actor without opening a rom first
+- Slightly changes in functions xml
+
+## 0.2 ##
+
+- Added object import tab
+- Fix: When decompiling, it locates the 4 main functions better
+- Added an option to write jal descriptions when decompiling with Atom
+- Added an option to turn decimal offsets into hex when decompiling with Atom
+- Fix: When compiling, bss block is now taken into account when writting the end offset
+- Fix: When compiling, init vars offset will now point where it should instead of the start of the .data block
+- Added a message box in Help tab about what init vars you need to add in windows (required)
+
+## 0.1 ##
+
+- Initial release, glitchy
