@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table KeyType="System.UInt16" ValueType="System.String">
+
+  <ROM Key="00" Game="OOT" Prefix="DBGMQ" Build="03-02-21 00:16:31" z64hdr="oot_mq_debug"
+       SceneTable="00BA0BB0" 
+       ObjectTable="00B9E6C0" 
+       DmaTableStart="00012F70" 
+       DmaTableEnd="00018F30" 
+       ActorDmaTableStart="000131B0" 
+       ActorDmaTableEnd="00016660"
+       OverlayTable="00B8D440" 
+       OverlayTableEnd="00B90F20" 
+       RandomDropTable="00B8C714" 
+       LinkOffset="00BA4360" 
+       LinkFuncsInCode="00B288F8,00B28900,00B28908,00B28914,00B2891C,00B28928,00B28930,00B2893C" 
+       PauseMenuOffset="00BA4344" 
+       PauseMenuFuncsInCode="00B33208,00B3320C,00B33218,00B33220">OoT MQ debug rom
+  </ROM>
+  <ROM Key="01" Game="OOT" Prefix="N0" Build="98-10-21 04:56:31" z64hdr="oot_u10"
+       SceneTable="00B71440" 
+       ObjectTable="00B6EF50"  
+       DmaTableStart="00007430" 
+       DmaTableEnd="0000D290" 
+       ActorDmaTableStart="00007670" 
+       ActorDmaTableEnd="0000AB30" 
+       OverlayTable="00B5E490" 
+       OverlayTableEnd="00B61F70" 
+       RandomDropTable="00B5D764" 
+       LinkOffset="00B74400" 
+       LinkFuncsInCode="00B0D5B8,00B0D5C0,00B0D5C8,00B0D5D4,00B0D5DC,00B0D5E8,00B0D5F0,00B0D5FC"
+       PauseMenuOffset="00B743E4"
+       PauseMenuFuncsInCode="00B0FE48,00B0FE50,00B0FE58,00B0FE64">OoT JP/US 1.0
+  </ROM>
+  <ROM Key="02" Game="MM" Prefix="J0" Build="00-03-31 02:22:11" z64hdr=""
+       SceneTable="00C76510" 
+       ObjectTable="00C74FC0"  
+       DmaTableStart="0001C110" 
+       DmaTableEnd="000221F0" 
+       ActorDmaTableStart="0001C340" 
+       ActorDmaTableEnd="000206A0" 
+       OverlayTable="00C617C0" 
+       OverlayTableEnd="00C66E00"
+       RandomDropTable="00000000"
+       LinkOffset="00C82CB0" 
+       LinkFuncsInCode="00C13EA8,00C13EB0,00C13EB8,00C13EC4,00C13ECC,00C13ED8,00C13EE0,00C13EEC"
+       PauseMenuOffset="00C82C94"
+       PauseMenuFuncsInCode="00C16E08,00C16E10,00C16E18,00C16E24">MM JP 1.0
+  </ROM>
+  <ROM Key="03" Game="MM" Prefix="U0" Build="00-07-31 17:04:16" z64hdr="mm_u10"
+       SceneTable="00C5A1E0"
+       ObjectTable="00C58C78"  
+       DmaTableStart="0001A500" 
+       DmaTableEnd="00020600" 
+       ActorDmaTableStart="0" 
+       ActorDmaTableEnd="0" 
+       OverlayTable="00C45510" 
+       OverlayTableEnd="00C4AB30" 
+       RandomDropTable="00000000"
+       LinkOffset="00C670D0" 
+       LinkFuncsInCode="00BF6FD8,00BF6FE0,00BF6FE8,00BF6FF4,00BF6FFC,00BF7008,00BF7010,00BF701C"
+       PauseMenuOffset="00C670B4"
+       PauseMenuFuncsInCode="00BF9F38,00BF9F40,00BF9F48,00BF9F54">MM USA 1.0</ROM>
+  <!--ROM Key="02" Game="MM" Prefix="MQU" Build="03-08-26 04:20:25" SceneTable="00C66F50" ObjectTable="0" OverlayTable="00C52280" OverlayTableEnd="00C578A0">MM GCN USA</ROM-->
+</Table>

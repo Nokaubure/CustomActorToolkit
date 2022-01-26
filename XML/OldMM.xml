@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table KeyType="System.UInt16" ValueType="System.String">
+  <Function RAMJ0="800B8404" Source="" ShortName="" Description="Scale Actor" Args="A0 - global context | A1 - float value" />
+  <Function RAMJ0="800FD9AC" Source="" ShortName="Rand.Next() float" Description="Generates a random number between 0 inclusive and 1 exclusive" Args="F0 = returned value" />
+  <Function RAMJ0="80101080" Source="" ShortName="" Description="Generates random s16 number" Args="A0 = s16 Offset | A1 = s16 Range | V0 = s16 Result" Description2="Generates random integer between 0 and range (exlusive), and adds Offset" />
+  <Function RAMJ0="800B3CEC" Source="" ShortName="" Description="Spawn Particle 0x0E" Args="" />
+  <Function RAMJ0="80101A28" Source="" ShortName="" Description="smoothly aproximates a0 to a1, commonly used for smooth movement" Args="a0 - actor instance + xxxx (offset of the float that will change) | a1 - float where you want a0 to be aproximated to | a2 - float (amount?)a3 - float (smaller than a2)" />
+  <Function RAMJ0="8017CD28" Source="" ShortName="" Description="Multiply Float Matrix Stack's top matrix by float Vector3" Args="A0 = ptr to Vector3 | A1 = ptr to result" />
+  <Function RAMJ0="800B5784" Source="" ShortName="" Description="Draws circular shadow until instance is destroyed (use in constructor)" Args="a0 - actor instance + 0xB4  | a1 - float unknown (will be stored at a0 + 0x08)  | a2 - 800B5BA0 (draw function of shadow, will be stored at a0 + 0x0C)  | a3 - float unknown (will be stored at a0 + 0x10)" />
+  <Function RAMJ0="800E26BC" Source="" ShortName="" Description="Initializes hitbox structure (different purpose than ???)" Args="a0 - global context | a1 - actor instance + 0x0150 (offset of hitbox struct in the instance) " />
+  <Function RAMJ0="800E29D0" Source="" ShortName="" Description="Loads hitbox variable array to hitbox structure  (different purpose than ???) " Args="a0 - global context | a1 - actor instance + 0x0150 (offset of hitbox struct in the instance) | a2 - actor instance | a3 - hitbox variable array " />
+  <Function RAMJ0="800E1F20" Source="" ShortName="" Description="retrieves damage chart table pointer, called by all actors that doesn't have their damage chart inside overlay" Args="a0 - entry ID of some table? varies between actors | v0 - returns pointer that's used in a1 of damage chart initializer (800E90CC)" />
+  <Function RAMJ0="800E90CC" Source="/z_collision_check.c" ShortName="" Description="initializes damage chart part of actor" Args="" />
+  <Function RAMJ0="800E2788" Source="" ShortName="" Description="Unloads hitbox structure  (different purpose than ???)" Args="a0 - global context | a1 - actor instance + 0x0150 (offset where you stored the hitbox struct)" />
+  <Function RAMJ0="800E42B0" Source="/z_collision_check.c" ShortName="CollisionCheck_setAC" Description="Subscribe to collision pool 2, non-complex poly types | //Called directly by actors" Args="A0 = Global Context | A1 = //collision body groups | A2 = Collision Body Ptr | V0 = 0 or -1 based on ??? lowest bit?" />
+  <Function RAMJ0="800E4498" Source="/z_collision_check.c" ShortName="CollisionCheck_setOT" Description="Subscribe to collision pool 3, non-complex poly types" Args="A0 = Global Context | A1 = //collision body groups | A2 = Collision Body Ptr | V0 = 0 or -1 based on ??? lowest bit? | Called directly by actors" />
+  <Function RAMJ0="800F20C8" Source="" ShortName="" Description="plays sound at position" Args="a0 - global context | a1 - actor instance + 0x24 (position array of the sound) | a2 - 0x3C (radius?) | a3 - sound ID" />
+  <Function RAMJ0="800B8330" Source="" ShortName="" Description="Kill Actor (nulls draw/update, but does not deallocate)" Args="A0 = Actor Instance ptr" />
+  <Function RAMJ0="800B85D0" Source="" ShortName="" Description="Physics, updates XYZ coordinates of actor" Args="A0 = Actor Instance ptr" />
+  <Function RAMJ0="800B94DC" Source="" ShortName="" Description="possibly primary actor collision call" Args="A0 = Global Context | A1 = Actor Instance | A2 = float wallCheckHeight? (26f for Link) | A3 = float wallPushback? (18f/14f for Adult/Child Link) | SP+0x10 float ? (56f/40f for Adult/Child Link) | SP+0x14 int (type?)" />
+  <Function RAMJ0="800B8380" Source="" ShortName="" Description="Sets the actor height (used by navi, target arrows, camera face when an npc is talking, etc)" Args="a0 - actor instance | a1 - float Y position from actor origin" />
+  <Function RAMJ0="8017B62C" Source="" ShortName="" Description="Create/Apply x,y,z scalar transformation on Float Matrix Stack" Args="F12 = x | F14 = y | A2 = float z | A3 = 0 initializes new matrix, 1 transforms stored matrix" />
+  <Function RAMJ0="8017CCD0" Source="" ShortName="" Description="Converts and Appends the Float Matrix Stack's top matrix to POLY_OPA_DISP end" Args="A0 = Graphics Context" />
+</Table>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table KeyType="System.UInt16" ValueType="System.String">
+  <!-- credits to mzxrules, nokaubure, crookedpoe and ideka      -->
+  <Function RAMDBGMQ="8001F548" RAMN0="80013678" Source="" ShortName="" Description="Drops a collectible" Args="a0 = global context | a1 = actor instance + 0x24 | a2 = drop ID" />
+  <Function RAMDBGMQ="8001F77C" RAMN0="800138B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8001F940" RAMN0="80013A84" Source="" ShortName="" Description="Randomized item spawn" Args="a0 = global context | a1 = actor instance | a2 = position array | a3 = drop table ID" />
+  <Function RAMDBGMQ="8001FDF0" RAMN0="80013F30" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80020120" RAMN0="80014254" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80026230" RAMN0="8001A0E0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80026608" RAMN0="8001A468" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80026B0C" RAMN0="8001A890" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80026CD4" RAMN0="8001AA5C" Source="" ShortName="EffectAdd" Description="" Args="" />
+  <Function RAMDBGMQ="8002709C" RAMN0="8001AE04" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800274E0" RAMN0="8001B1A4" Source="" ShortName="" Description="Kill Particle" Args="A0 = Particle Instance Ptr" />
+  <Function RAMDBGMQ="80027704" RAMN0="8001B3D0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80027DD4" RAMN0="8001B8FC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80027F80" RAMN0="8001BAA0" Source="" ShortName="" Description="Draw Splash? (Particle 0x0A)" Args="" />
+  <Function RAMDBGMQ="8002829C" RAMN0="8001BD94" Source="" ShortName="" Description="Spawn Particle 0x00 Type 0 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="8002836C" RAMN0="8001BE64" Source="" ShortName="" Description="Spawn Particle 0x00 Type 0 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="8002843C" RAMN0="8001BF34" Source="" ShortName="" Description="Spawn Particle 0x00 Type 2 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="8002865C" RAMN0="8001C154" Source="" ShortName="" Description="Spawn Particle 0x00 Type 4 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="800286CC" RAMN0="8001C1C4" Source="" ShortName="" Description="Spawn Particle 0x00 Type 5 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="8002873C" RAMN0="8001C234" Source="" ShortName="" Description="Spawn Particle 0x00 Type 4 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="800287AC" RAMN0="8001C2A4" Source="" ShortName="" Description="Spawn Particle 0x00 Type 5 (Wrapper for 8001BCE0)" Args="" />
+  <Function RAMDBGMQ="80028990" RAMN0="8001C488" Source="" ShortName="" Description="Spawn 20 Particle 0x00 (Calls 8001C234)" Args="" />
+  <Function RAMDBGMQ="80028A54" RAMN0="8001C54C" Source="" ShortName="" Description="Spawn 20 Particle 0x00 (Calls 8001C2A4)" Args="" />
+  <Function RAMDBGMQ="80028B18" RAMN0="8001C610" Source="" ShortName="" Description="Spawn Particle 0x01 (Wrapper for 8001C6A8)" Args="" />
+  <Function RAMDBGMQ="80028B74" RAMN0="8001C66C" Source="" ShortName="" Description="Spawn Particle 0x01 (Wrapper for 8001C6A8)" Args="" />
+  <Function RAMDBGMQ="80028BB0" RAMN0="8001C6A8" Source="" ShortName="" Description="Spawn Particle 0x01 (Fairy Sparkle)" Args="" />
+  <Function RAMDBGMQ="80028CEC" RAMN0="8001C7E4" Source="" ShortName="" Description="Spawn Particle 0x01 (?, First Visit ToT as Adult)" Args="" />
+  <Function RAMDBGMQ="80028E84" RAMN0="8001C97C" Source="" ShortName="" Description="Spawn Particle 0x03" Args="" />
+  <Function RAMDBGMQ="80028F84" RAMN0="8001CA7C" Source="" ShortName="" Description="Spawn Particle 0x04 (Wrapper for 8001C9EC)" Args="" />
+  <Function RAMDBGMQ="80029024" RAMN0="8001CB1C" Source="" ShortName="" Description="Spawn Particle 0x04 (Wrapper for 8001CAD0)" Args="" />
+  <Function RAMDBGMQ="80029184" RAMN0="8001CC7C" Source="" ShortName="" Description="Spawn Particle 0x05 (Wrapper for 8001CDD4)" Args="Bomb Spark" />
+  <Function RAMDBGMQ="800293A0" RAMN0="8001CE98" Source="" ShortName="" Description="Spawn Particle 0x06 (Wrapper for 8001CE18)" Args="" />
+  <Function RAMDBGMQ="800293E4" RAMN0="8001CEDC" Source="" ShortName="" Description="Spawn Particle 0x07" Args="" />
+  <Function RAMDBGMQ="80029444" RAMN0="8001CF3C" Source="" ShortName="" Description="Spawn Particle 0x09" Args="" />
+  <Function RAMDBGMQ="8002949C" RAMN0="8001CF94" Source="" ShortName="" Description="Spawn Particle 0x0A" Args="" />
+  <Function RAMDBGMQ="80029530" RAMN0="8001D028" Source="" ShortName="" Description="Spawn Particle 0x0B" Args="" />
+  <Function RAMDBGMQ="800295A0" RAMN0="8001D098" Source="" ShortName="" Description="Spawn Particle 0x0D" Args="" />
+  <Function RAMDBGMQ="80029618" RAMN0="8001D110" Source="" ShortName="" Description="Spawn Particle 0x0E" Args="" />
+  <Function RAMDBGMQ="80029694" RAMN0="8001D18C" Source="" ShortName="" Description="Spawn Particle 0x0E" Args="" />
+  <Function RAMDBGMQ="80029724" RAMN0="8001D21C" Source="" ShortName="" Description="Spawn Particle 0x0F" Args="" />
+  <Function RAMDBGMQ="800297A4" RAMN0="8001D29C" Source="" ShortName="" Description="Spawn N Particle 0x0F (Wrapper for 8001D21C)" Args="SP+0x18 = s16 Particles to Spawn" />
+  <Function RAMDBGMQ="800299AC" RAMN0="8001D4A8" Source="" ShortName="" Description="Spawn Particle 0x11 (Wrapper for 8001D438)" Args="" />
+  <Function RAMDBGMQ="80029B90" RAMN0="8001D68C" Source="" ShortName="" Description="Spawn Particle 0x13" Args="" />
+  <Function RAMDBGMQ="80029C00" RAMN0="8001D6FC" Source="" ShortName="" Description="Spawn Particle 0x14" Args="" />
+  <Function RAMDBGMQ="80029CA4" RAMN0="8001D7A8" Source="" ShortName="" Description="Spawn Particle 0x15 (Wrapper for 8001D750)" Args="" />
+  <Function RAMDBGMQ="80029CC8" RAMN0="8001D7CC" Source="" ShortName="" Description="Spawn Particle 0x15 (Wrapper for 8001D750)" Args="" />
+  <Function RAMDBGMQ="80029CF0" RAMN0="8001D7F8" Source="" ShortName="" Description="Spawn Particle 0x16" Args="" />
+  <Function RAMDBGMQ="80029D5C" RAMN0="8001D864" Source="" ShortName="" Description="Spawn Particle 0x16" Args="" />
+  <Function RAMDBGMQ="80029DBC" RAMN0="8001D8C8" Source="" ShortName="" Description="Spawn Particle 0x17" Args="" />
+  <Function RAMDBGMQ="80029E8C" RAMN0="8001D998" Source="" ShortName="" Description="Spawn Particle 0x19" Args="" />
+  <Function RAMDBGMQ="8002A140" RAMN0="8001DC4C" Source="" ShortName="" Description="Spawn Particle 0x1B" Args="" />
+  <Function RAMDBGMQ="8002A1DC" RAMN0="8001DCEC" Source="" ShortName="" Description="Spawn Particle 0x1B" Args="" />
+  <Function RAMDBGMQ="8002A2A4" RAMN0="8001DDB8" Source="" ShortName="" Description="Spawn Particle 0x1B" Args="" />
+  <Function RAMDBGMQ="8002A3C4" RAMN0="8001DED8" Source="" ShortName="" Description="Spawn Particle 0x1C (Wrapper for 8001DE40)" Args="" />
+  <Function RAMDBGMQ="8002A4D4" RAMN0="8001DFEC" Source="" ShortName="" Description="Spawn Particle 0x1D" Args="" />
+  <Function RAMDBGMQ="8002A5F4" RAMN0="8001E110" Source="" ShortName="" Description="Spawn Particle 0x1E" Args="" />
+  <Function RAMDBGMQ="8002A65C" RAMN0="8001E178" Source="" ShortName="" Description="Spawn Particle 0x1F" Args="" />
+  <Function RAMDBGMQ="8002A6B8" RAMN0="8001E1D4" Source="" ShortName="" Description="Spawn Particle 0x20" Args="" />
+  <Function RAMDBGMQ="8002A770" RAMN0="8001E28C" Source="" ShortName="" Description="Spawn Particle 0x21" Args="" />
+  <Function RAMDBGMQ="8002A90C" RAMN0="8001E428" Source="" ShortName="" Description="Spawn Particle 0x22 (Wrapper for 8001E3B0)" Args="" />
+  <Function RAMDBGMQ="8002A9F4" RAMN0="8001E510" Source="" ShortName="" Description="Spawn Particle 0x23 (Wrapper for 8001E478)" Args="" />
+  <Function RAMDBGMQ="8002AA44" RAMN0="8001E560" Source="" ShortName="" Description="Spawn Particle 0x24" Args="" />
+  <Function RAMDBGMQ="8002B1E0" RAMN0="8001EC20" Source="" ShortName="" Description="Draws circular shadow until instance is destroyed (use in constructor)" Args="a0 - actor instance + 0xB4  | a1 - float unknown (will be stored at a0 + 0x08)  | a2 - 8002B5EC (draw function of shadow, will be stored at a0 + 0x0C)  | a3 - float unknown (will be stored at a0 + 0x10)" />
+  <Function RAMDBGMQ="8002BDB0" RAMN0="8001F74C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002CB40" RAMN0="8002049C" Source="/flg_set.c" ShortName="" Description="Tests if Switch Flag is Set" Args="A0 = Global Context | A1 = Switch Flag Value | V0 = 0 if not set, or the flag bit if set" />
+  <Function RAMDBGMQ="8002CB74" RAMN0="800204D0" Source="/flg_set.c" ShortName="" Description="Sets Switch Flag to 1" Args="A0 = Global Context | A1 = Switch Flag Value" />
+  <Function RAMDBGMQ="8002CBB4" RAMN0="80020510" Source="/flg_set.c" ShortName="" Description="Sets Switch Flag to 0" Args="A0 = Global Context | A1 = Switch Flag Value" />
+  <Function RAMDBGMQ="8002CBF8" RAMN0="80020554" Source="/flg_set.c" ShortName="" Description="Tests if Unused Scene Flag is Set" Args="A0 = Global Context | A1 = Flag Value | V0 = 0 if not set, or the flag bit if set" />
+  <Function RAMDBGMQ="8002CC2C" RAMN0="80020588" Source="/flg_set.c" ShortName="" Description="Sets Unused Scene Flag to 1" Args="A0 = Global Context | A1 = Flag Value" />
+  <Function RAMDBGMQ="8002CC6C" RAMN0="800205C8" Source="/flg_set.c" ShortName="" Description="Sets Unused Scene Flag to 0" Args="A0 = Global Context | A1 = Flag Value" />
+  <Function RAMDBGMQ="8002CCB0" RAMN0="8002060C" Source="/flg_set.c" ShortName="" Description="Tests if a Chest Flag is set" Args="A0 = Global Context | A1 = Flag Value | V0 = 0 if not set, or the flag bit if set" />
+  <Function RAMDBGMQ="8002CCC4" RAMN0="80020624" Source="/flg_set.c" ShortName="" Description="Sets Chest Flag to 1" Args="A0 = Global Context | A1 = Flag Value" />
+  <Function RAMDBGMQ="8002CCDC" RAMN0="80020640" Source="/flg_set.c" ShortName="" Description="Test if a Room Clear Flag is set" Args="A0 = Global Context | A1 = Flag Value | V0 = 0 if not set, or the flag bit if set" />
+  <Function RAMDBGMQ="8002CCF0" RAMN0="80020658" Source="/flg_set.c" ShortName="" Description="Sets Room Clear Flag to 1" Args="A0 = Global Context | A1 = Flag Value" />
+  <Function RAMDBGMQ="8002CD24" RAMN0="80020694" Source="/flg_set.c" ShortName="" Description="Tests if Global Context + 0x1D40 Flag is set" Args="A0 = Global Context | A1 = Flag Value | V0 = 0 if not set, or the flag bit if set" />
+  <Function RAMDBGMQ="8002CD38" RAMN0="800206AC" Source="/flg_set.c" ShortName="" Description="Sets Global Context + 0x1D40 Flag to 1" Args="A0 = Global Context | A1 = Flag Value" />
+  <Function RAMDBGMQ="8002CD6C" RAMN0="800206E8" Source="/flg_set.c" ShortName="" Description="Tests if Scene Collectible Flag is set" Args="A0 = Global Context | A1 = Flag Value | V0 = 0 if not set, or the flag bit if set" />
+  <Function RAMDBGMQ="8002CDA0" RAMN0="8002071C" Source="/flg_set.c" ShortName="" Description="Sets Scene Collectible Flag to 1" Args="A0 = Global Context | A1 = Flag Value" />
+  <Function RAMDBGMQ="8002CE00" RAMN0="80020780" Source="" ShortName="" Description="Boss Title" Args="A0 - global context | A1 - A0 + 0x1D4C | A2 - (object pointer + texture offset inside the object)" />
+  <Function RAMDBGMQ="8002D570" RAMN0="80020EB4" Source="" ShortName="" Description="Kill Actor (nulls draw/update, but does not deallocate)" Args="A0 = Actor Instance ptr" />
+  <Function RAMDBGMQ="8002D5B8" RAMN0="80020F04" Source="" ShortName="" Description="Sets the actor height (used by navi, target arrows, camera face when an npc is talking, etc)" Args="a0 - actor instance | a1 - float Y position from actor origin" />
+  <Function RAMDBGMQ="8002D62C" RAMN0="80020F88" Source="" ShortName="" Description="Scale Actor" Args="A0 - actor context | A1 - float value" />
+  <Function RAMDBGMQ="8002D644" RAMN0="80020FA4" Source="" ShortName="" Description="Update CPU Segment 0x06 to point to actor's defined object dependency" Args="A0 = Global Context | A1 = Actor Instance ptr" />
+  <Function RAMDBGMQ="8002D7EC" RAMN0="80021124" Source="" ShortName="" Description="Physics, updates XYZ coordinates of actor" Args="A0 = Actor Instance ptr" />
+  <Function RAMDBGMQ="8002D868" RAMN0="800211A4" Source="" ShortName="" Description="Physics, updates XYZ velocity vectors (+0x5C) of an actor" Args="A0 = Actor Instance ptr" Description2="Only factors y component of speed rotation xyz (+0x30) " />
+  <Function RAMDBGMQ="8002D8E0" RAMN0="8002121C" Source="" ShortName="" Description="Function to move in direction (0x32) at set velocity (0x68)" Args="a0 = pointer to start address of actor instance" />
+  <Function RAMDBGMQ="8002D908" RAMN0="80021248" Source="" ShortName="" Description="Physics, updates XYZ velocity vectors (+0x5C) of an actor" Args="" Description2="Factors x and y component of speed rotation xyz (+0x30)" />
+  <Function RAMDBGMQ="8002D97C" RAMN0="800212B8" Source="" ShortName="" Description="Physics, updates XYZ velocity and XYZ coordinates of actor | (Wrapper for 80021248 and 80021124)" Args="A0 = Actor Instance ptr" />
+  <Function RAMDBGMQ="8002D9A4" RAMN0="800212E4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DA78" RAMN0="800213B4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DAC0" RAMN0="8002140C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DAE0" RAMN0="80021430" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DB28" RAMN0="80021488" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DB48" RAMN0="800214AC" Source="" ShortName="" Description="Calculates XYZ between two actors (+0x24) | Wrapper for 80063E18" Args="A0 = Actor A | A1 = Actor B | F0 = Result" />
+  <Function RAMDBGMQ="8002DB6C" RAMN0="800214D8" Source="" ShortName="" Description="Calculates XYZ between actor (+0x24) and a point  | Wrapper fo 80063E18" Args="A0 = Actor | A1 = Coordinate ptr | F0 = Result" />
+  <Function RAMDBGMQ="8002DB8C" RAMN0="800214FC" Source="" ShortName="" Description="Calculates XZ distance between two actors (+0x24) | Wrapper for 80063EB8" Args="A0 = Actor A | A1 = Actor B | F0 = Result" />
+  <Function RAMDBGMQ="8002DBB0" RAMN0="80021528" Source="" ShortName="" Description="Calculates XZ distance between actor (+0x24) and a Point  | Wrapper for 80063EB8" Args="A0 = Actor | A1 = Coordinate ptr | F0 = Result" />
+  <Function RAMDBGMQ="8002DBD0" RAMN0="8002154C" Source="" ShortName="" Description="Returns vertical, horizontal and front distance between 2 points taking rotation of instance into account" Args="a0 - actor instance | a1 - $sp + offset to store an array of 3 floats | a2 - array position of Link (and other stuff?)" />
+  <Function RAMDBGMQ="8002DD78" RAMN0="800216F8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DDE4" RAMN0="80021768" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DDF4" RAMN0="8002177C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DE04" RAMN0="80021790" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DEEC" RAMN0="8002187C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DF38" RAMN0="800218C8" Source="" ShortName="" Description="Sets cutscene action for Link, and sets Link + 0x046A to 1" Args="a0 = global context | a1 = actor instance (unknown usage) | a2 = action ID (check var_80854B18 in link action)" />
+  <Function RAMDBGMQ="8002DF54" RAMN0="800218EC" Source="" ShortName="" Description="Sets cutscene action for Link, and sets Link + 0x046A to 0" Args="a0 = global context | a1 = actor instance (unknown usage) | a2 = action ID (check var_80854B18 in link action)" />
+  <Function RAMDBGMQ="8002DF90" RAMN0="80021928" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002DFC8" RAMN0="80021968" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002E084" RAMN0="80021A28" Source="" ShortName="" Description="Detects if the angle to face Link is inside a1 range" Args="a0 = actor context | a1 = short angle value | v0 = 0 if false" />
+  <Function RAMDBGMQ="8002E12C" RAMN0="80021AD4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002E1A8" RAMN0="80021B54" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002E4B4" RAMN0="80021E6C" Source="" ShortName="" Description="Possibly primary actor collision call" Args="A0 = Global Context | A1 = Actor Instance | A2 = float wallCheckHeight? (26f for Link) | A3 = float wallPushback? (18f/14f for Adult/Child Link) | SP+0x10 float ? (56f/40f for Adult/Child Link) | SP+0x14 int (type?)" />
+  <Function RAMDBGMQ="8002EBCC" RAMN0="80022438" Source="" ShortName="" Description="Sets lighting angles for shiny things or something." Args="" />
+  <Function RAMDBGMQ="8002ED80" RAMN0="80022554" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F194" RAMN0="80022930" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F1C4" RAMN0="80022960" Source="" ShortName="" Description="NPC Request Trade Item" Args="A0 = Actor Instance | A1 = Global Context | A2 = float (distance 1?) | A3 = float (disstance 2?) | SP+0x10 = Trade Item Index" />
+  <Function RAMDBGMQ="8002F298" RAMN0="80022A34" Source="" ShortName="" Description="NPC Request Trade Item | (Wrapper for 80022960)" Args="A0 = Actor Instance | A1 = Global Context | A2 = float distance? | A3 = Trade Item Index" Description2="Passes A2 into A2 and A3 of inner function" />
+  <Function RAMDBGMQ="8002F2CC" RAMN0="80022A68" Source="" ShortName="" Description="NPC Request Trade Item? | (Wrapper for 80022A34)" Args="A0 = Actor Instance | A1 = Global Context | A2 = float distance?" Description2="Calls wrapped function with A3 = 0" />
+  <Function RAMDBGMQ="8002F2F4" RAMN0="80022A90" Source="" ShortName="" Description="NPC Request Trade Item? | (Wrapper for 80022A68)" Args="A0 = Actor Instance | A1 = Global Context" Description2="Calls wrapped function with A2 =(float) s16 Inst. + 0x98 + 50.0f" />
+  <Function RAMDBGMQ="8002F334" RAMN0="80022AD0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F368" RAMN0="80022B04" Source="" ShortName="" Description="Get Trade Item Link is holding" Args="Returns Link Instance + 0x0683" />
+  <Function RAMDBGMQ="8002F374" RAMN0="80022B14" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F410" RAMN0="80022BB0" Source="/z_actor.c" ShortName="" Description="Is Actor Held? Or Interacting?" Args="A0 = Actor Instance | V0 = 0 if Instance + 0x118 is null, else 1" />
+  <Function RAMDBGMQ="8002F434" RAMN0="80022BD4" Source="/z_actor.c" ShortName="" Description="Give Item" Args="A0 = Actor instance //Actor giving item | A1 = Global Context | A2 = Get Item ID | A3 = float, max xz distance from actor to Link that item will be given | SP+10 = float, max y distance from actor to Link that item will be given" />
+  <Function RAMDBGMQ="8002F554" RAMN0="80022CF4" Source="/z_actor.c" ShortName="" Description="Give Item Wrapper (80022BD4) | Sets A3 to 50.0f, SP+0x10 to 10.0f" Args="A0 = Actor Instance | A1 = Global Context | A2 = Get Item Id" />
+  <Function RAMDBGMQ="8002F580" RAMN0="80022D20" Source="/z_actor.c" ShortName="" Description="Give Item Wrapper (80022CF4) | Sets A2 to 0" Args="A0 = Actor Instance | A1 = Global Context" />
+  <Function RAMDBGMQ="8002F5A0" RAMN0="80022D40" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F5C4" RAMN0="80022D64" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F5F0" RAMN0="80022D94" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F618" RAMN0="80022DBC" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F63C" RAMN0="80022DE0" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F674" RAMN0="80022E18" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F6D4" RAMN0="80022E7C" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F71C" RAMN0="80022EC4" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F7A0" RAMN0="80022F48" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F7DC" RAMN0="80022F84" Source="/z_actor.c" ShortName="" Description="Play Sound Effect (Actor)" Args="A0 = Actor Instance | A1 = Sfx Id" />
+  <Function RAMDBGMQ="8002F828" RAMN0="80022FD0" Source="/z_actor.c" ShortName="" Description="Play Sound Effect (Actor)" Args="A0 = Actor Instance | A1 = Sfx Id" />
+  <Function RAMDBGMQ="8002F850" RAMN0="80022FFC" Source="/z_actor.c" ShortName="" Description="Play Surface Sound Effect" Args="A0 = Global Context | A1 = Actor Instance" />
+  <Function RAMDBGMQ="8002F8F0" RAMN0="800230A0" Source="/z_actor.c" ShortName="" Description="Play Sound Effect (Actor)" Args="A0 = Actor Instance | A1 = Sfx Id" />
+  <Function RAMDBGMQ="8002F948" RAMN0="80023108" Source="/z_actor.c" ShortName="" Description="Play sound in a loop?" Args="a0 - actor instance | a1 = sfx id" />
+  <Function RAMDBGMQ="8002F974" RAMN0="8002313C" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F994" RAMN0="80023164" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8002F9EC" RAMN0="800231BC" Source="/z_actor.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800314D4" RAMN0="800249DC" Source="/z_actor.c" ShortName="" Description="Possibly tests if actor should be drawn" Args="A0 = Global Context | A1 = actor instance | A2 = actor instance + 0xE4 | A3 = float at actor instance + 0xF0" />
+  <Function RAMDBGMQ="80031F50" RAMN0="80025110" Source="" ShortName="ActorSpawn" Description="Spawn Actor" Args="A0 = Global Context + 0x1C24 | A1 = Global Context | A2 = s16 Actor Id | A3 = float x | SP+0x10 = float y | SP+0x14 = float z | SP+0x18 = rotx | SP+0x1C = roty | SP+0x20 = rotz | SP+0x24 = s16 var | V0 = Pointer to new actor, or null" />
+  <Function RAMDBGMQ="80032458" RAMN0="800253F0" Source="" ShortName="" Description="Spawn Attached Actor" Args="A0 = Global Context + 0x1C24 | A1 = Actor* attachToInstance | A2 = Global Context | A3 = s16 Actor Id | SP + 0x10 = float x | SP + 0x14 = float y | SP + 0x18 = float z | SP + 0x1C = s16 rotx | SP + 0x20 = s16 roty | SP + 0x24 = s16 rotz | SP + 0x28 = s16 var | V0 = Pointer to new actor, or null if allocation failed" Description2="New actor + 0x118 will be set to A2 | Existing Actor + 0x11C will be set to the new actor's ptr | the new actor will be bound to the existing actor's room unless spawned actor is global (room = -1)" />
+  <Function RAMDBGMQ="80032C3C" RAMN0="80025B0C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80032C7C" RAMN0="80025B4C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80032E24" RAMN0="80025D04" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80032F54" RAMN0="80025DFC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003305C" RAMN0="80025F04" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033260" RAMN0="800260E8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033480" RAMN0="80026308" Source="" ShortName="" Description="Dust particle?" Args="" />
+  <Function RAMDBGMQ="80033640" RAMN0="800264C8" Source="" ShortName="" Description="Collision, Test if entity is being bombed" Args="A0 = Global Context | A1 = Actor Collision Struct | V0 = Null or Pointer to Explosive-type actor that collided" />
+  <Function RAMDBGMQ="80033684" RAMN0="8002650C" Source="" ShortName="" Description="Unknown, collision detection related" Args="a0 = global context | a1 = actor instance | v0 = unknown" />
+  <Function RAMDBGMQ="80033748" RAMN0="800265D4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033780" RAMN0="80026614" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033940" RAMN0="800267D4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800339B8" RAMN0="80026850" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033A84" RAMN0="8002691C" Source="" ShortName="" Description="? Same code as 80026950" Args="A0 = Global Context | A1 = ?" />
+  <Function RAMDBGMQ="80033AB8" RAMN0="80026950" Source="" ShortName="" Description="? Same code as 8002691C" Args="A0 = Global Context | A1 = ?" />
+  <Function RAMDBGMQ="80033AEC" RAMN0="80026984" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033C30" RAMN0="80026AD0" Source="" ShortName="" Description="Draw circular shadow" Args="a0 actor pointer + 0x24 (position array) | a1  scale, 12 byte array | a2 0x00FF | a3 global context" />
+  <Function RAMDBGMQ="80033E88" RAMN0="80026CF4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80033EF8" RAMN0="80026D64" Source="" ShortName="" Description="Generates a random floating point between 0 and N exclusive" Args="F12 = N, exclusive upper bound | F0 = result" />
+  <Function RAMDBGMQ="80033F20" RAMN0="80026D90" Source="" ShortName="" Description="Multiplies value by a random scalar between -0.5 and 0.5 exclusive" Args="F12 = N | F0 = result" />
+  <Function RAMDBGMQ="8003424C" RAMN0="80027070" Source="" ShortName="" Description="Wrapper for 800511B8" Args="" />
+  <Function RAMDBGMQ="8003426C" RAMN0="80027090" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800343CC" RAMN0="800271FC" Source="" ShortName="" Description="Set NPC Dialog Response" Args="A0 = Global Context | A1 = Actor Instance | A2 = ? | A3 = ?" />
+  <Function RAMDBGMQ="800347E8" RAMN0="80027620" Source="" ShortName="" Description="" Args="A0 = s16 unk | v0 = unk" />
+  <Function RAMDBGMQ="80034A14" RAMN0="80027854" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80034DD4" RAMN0="80027BA8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80034EC0" RAMN0="80027C98" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80034F54" RAMN0="80027D30" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80035260" RAMN0="80028048" Source="" ShortName="" Description="Draws Opaque Dlist" Args="a0 - global context | a1 - DList segment offset" />
+  <Function RAMDBGMQ="80035324" RAMN0="800280C8" Source="" ShortName="" Description="Draws Translucent Dlist" Args="a0 - global context | a1 - DList segment offset | a2 - Unknown, set to 0" />
+  <Function RAMDBGMQ="800353F4" RAMN0="80028158" Source="" ShortName="" Description="Find actor instance of certain ID / category / distance" Args="a0 - global context | a1 - actor instance | a2 - actor id (0xFFFF = any) | a3 - category | 0x10($sp) distance (float)" />
+  <Function RAMDBGMQ="800354B4" RAMN0="8002821C" Source="" ShortName="" Description="Checks if link is at certain distance, and if link is attacking, doesn't check jumpslashes" Args="a0 - global context | a1 - actor instance | a2 - float value | a3 - ???? | 0x10($sp) - rotation value? | 0x14($sp) - rotation value 0xB6(s0)? | v0 - returns true/false" />
+  <Function RAMDBGMQ="8003555C" RAMN0="800282C4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800355B8" RAMN0="80028320" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800355E4" RAMN0="8002834C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80035628" RAMN0="80028390" Source="" ShortName="" Description="Subtracts damage amount (colliding damage source) from instance's health" Args="a0 - actor instance" />
+  <Function RAMDBGMQ="80035650" RAMN0="800283BC" Source="" ShortName="" Description="Attack Collision (sets redead-freeze variable in some cases)" Args="A0 = Actor Instance | A1 = Actor hitbox struct + 0x18 | A2 = ? (0 this pass) | result stored at a0 + 0x116 " />
+  <Function RAMDBGMQ="8003573C" RAMN0="800284A8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80035844" RAMN0="800285B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800359B8" RAMN0="80028720" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80035B4C" RAMN0="800288B4" Source="" ShortName="" Description="Tests if event_chk_inf flag is set" Args="A0 = event_chk_inf flag id | V0 = 0 if not set, non-zero if set" />
+  <Function RAMDBGMQ="80035B74" RAMN0="800288E0" Source="" ShortName="" Description="Sets event_chk_inf flag to 1" Args="A0 = event_chk_inf_flag id" />
+  <Function RAMDBGMQ="80037C30" RAMN0="8002A9AC" Source="" ShortName="" Description="Generic NPC Text Handler 7" Args="a0 - global context | a1 - 0xF (?) | v0 - (?)" />
+  <Function RAMDBGMQ="80037D98" RAMN0="8002AB20" Source="" ShortName="" Description="Enables speak command, use in update" Args="a0 - global context  |  a1 - actor instance  | a2 - 0xF (??? related to what message to display)  | a3 - actor instance + 0x01A0 (not sure what this points to...)" />
+  <Function RAMDBGMQ="80038290" RAMN0="8002B024" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003C890" RAMN0="8002F3A4" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003C940" RAMN0="8002F454" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003C9A4" RAMN0="8002F4B8" Source="/z_bgcheck.c" ShortName="" Description="Raycast" Args="a0 = global context + 0x07C0 | a1 = actor instance + 0x78 (touching floor polygon, checked falling platform and magic bean) | a2 = some place in the current stack? | a3 = actor instance | 0x10 $sp = actor instance + 0x24 (position) | $f0 (return value) = Y position to place actor at" />
+  <Function RAMDBGMQ="8003CA0C" RAMN0="8002F520" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003CA64" RAMN0="8002F578" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003D464" RAMN0="8002FF1C" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003DE84" RAMN0="800308B4" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003DF10" RAMN0="80030940" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003DFA0" RAMN0="800309D0" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003E02C" RAMN0="80030A5C" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003E0B8" RAMN0="80030AE8" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003E0FC" RAMN0="80030B2C" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003E30C" RAMN0="80030D08" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003EA74" RAMN0="800313A4" Source="/z_bgcheck.c" ShortName="DynaPolyInfo_setActor" Description="Initializes Poly Collision Actor" Args="A0 = Global Context | A1 = Global Context + 0x810 | A2 = Actor Index | A3 = result of func 80041880 | V0 = Mesh Collision Id" />
+  <Function RAMDBGMQ="8003EB84" RAMN0="80031464" Source="/z_bgcheck.c" ShortName="DynaPolyInfo_getActor" Description="Get Poly Collision Actor reference" Args="A0 = Global Context | A1 = Mesh Collision Id | V0 = Actor Instance or null" />
+  <Function RAMDBGMQ="8003EBF8" RAMN0="800314D8" Source="/z_bgcheck.c" ShortName="" Description="" Args="A0 = global | A1 = global+0x810 (collision context) | A2 = actor + 0x14C (polyID)" />
+  <Function RAMDBGMQ="8003EC50" RAMN0="80031530" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003ECA8" RAMN0="80031588" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8003ED58" RAMN0="80031638" Source="/z_bgcheck.c" ShortName="DynaPolyInfo_delReserve" Description="Removes Poly Collision Actor " Args="A0 = Global Context | A1 = Global Context + 0x810 | A2 = Mesh Collision Id" />
+  <Function RAMDBGMQ="8003EE6C" RAMN0="800316C0" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80041880" RAMN0="80033EF4" Source="/z_bgcheck.c" ShortName="" Description="Convert Poly Collision Segment Addresses to real addresses" Args="A0 = Segment Offset to Collision Data | A1 = ptr to store result?" />
+  <Function RAMDBGMQ="80041D4C" RAMN0="800343D4" Source="/z_bgcheck.c" ShortName="" Description="Get PolyType High Word >> 0x0003 E000" Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="80041DB8" RAMN0="8003444C" Source="/z_bgcheck.c" ShortName="" Description="Collision, poly surface" Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="80041EA4" RAMN0="80034540" Source="/z_bgcheck.c" ShortName="" Description="Collision, poly surface, return? " Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="80041EEC" RAMN0="80034590" Source="/z_bgcheck.c" ShortName="" Description="Collision, poly surface, return? " Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="80041F34" RAMN0="800345DC" Source="/z_bgcheck.c" ShortName="" Description="Collision related" Args="A0 = Global Context + 0x7C0 | A1 = Ptr to the polygon detected | A2 = Complex Mesh Id. 0x32 = Scene Mesh" />
+  <Function RAMDBGMQ="80041FE8" RAMN0="8003469C" Source="/z_bgcheck.c" ShortName="" Description="Collision, poly surface, return?" Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="80042048" RAMN0="80034700" Source="/z_bgcheck.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800420C0" RAMN0="80034778" Source="/z_bgcheck.c" ShortName="" Description="Collision, poly surface, return Conveyor Surface Speed" Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="800420E4" RAMN0="800347A0" Source="/z_bgcheck.c" ShortName="" Description="Collision, poly surface, return Conveyor Surface Direction" Args="A0 = Global Context + 0x7C0 | A1 = Polygon* | A2 = Mesh Collision Id | V0 = Result" />
+  <Function RAMDBGMQ="8004213C" RAMN0="800347FC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80042244" RAMN0="80034908" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8004239C" RAMN0="80034A60" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800433A4" RAMN0="80035180" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80043480" RAMN0="80035260" Source="" ShortName="" Description="Set collision behaviour" Args="a0 - actor instance | a1 = if 1, updates the coordinates of actors on top of it" />
+  <Function RAMDBGMQ="800434A8" RAMN0="80035290" Source="" ShortName="" Description="performs OR 0x0001 to the value at 0x0160(a0)" Args="a0 - actor instance" />
+  <Function RAMDBGMQ="80043538" RAMN0="8003532C" Source="" ShortName="" Description="performs OR 0x0008 to the value at 0x0160(a0)" Args="a0 - actor instance" />
+  <Function RAMDBGMQ="80043548" RAMN0="80035340" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8004356C" RAMN0="80035364" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80043590" RAMN0="80035388" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800435B4" RAMN0="800353AC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800435D8" RAMN0="800353D0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005A77C" RAMN0="800495BC" Source="/z_camera.c" ShortName="" Description="Camera related (Wrapper for 800493C8)" Args="A0 = Camera struct ptr (ref in Global Context + 0x0790) | A1 = Camera S (0x25 this pass)" Description2="Function sets A2 = 0, calls inner function" />
+  <Function RAMDBGMQ="8005A948" RAMN0="80049708" Source="/z_camera.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005A9F4" RAMN0="8004977C" Source="/z_camera.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005AA1C" RAMN0="800497A4" Source="/z_camera.c" ShortName="" Description="Camera earthquake?" Args="a0 - global context +1E0 | a1 - unk | a2 - unk | a3 - unk" />
+  <Function RAMDBGMQ="8005AC60" RAMN0="800499F0" Source="/z_camera.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005AC6C" RAMN0="80049A00" Source="/z_camera.c" ShortName="" Description="Cutscene Camera?" Args="A0 = Cutscene Camera struct ptr | A1 = Focus Point Tween List | A2 = Camera Position Tween List | A3 = Actor Instance (tracked actor)" />
+  <Function RAMDBGMQ="8005ACFC" RAMN0="80049A94" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005AD1C" RAMN0="80049AB8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005AD40" RAMN0="80049AE0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005AFD4" RAMN0="80049D58" Source="" ShortName="setCameraData" Description="" Args="" />
+  <Function RAMDBGMQ="8005B198" RAMN0="80049DA4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005B1A4" RAMN0="80049DB4" Source="" ShortName="" Description="" Args="" Description2="padding at end of function" />
+  <Function RAMDBGMQ="8005B200" RAMN0="80049E10" Source="" ShortName="" Description="retrieves damage chart table pointer, called by all actors that doesn't have their damage chart inside overlay" Args="a0 - entry ID of some table? varies between actors | v0 - returns pointer that's used in a1 of damage chart initializer (80061EFC)" />
+  <Function RAMDBGMQ="8005BBF8" RAMN0="8004A484" Source="" ShortName="" Description="Initializes hitbox structure (cylinder array)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) " />
+  <Function RAMDBGMQ="8005BC28" RAMN0="8004A4B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005BCC8" RAMN0="8004A550" Source="" ShortName="" Description="Unloads hitbox structure (cylinder array)" Args="a0 - global context | a1 - actor instance + 0x0150 (offset where you stored the hitbox struct)" />
+  <Function RAMDBGMQ="8005BE50" RAMN0="8004A6BC" Source="" ShortName="ClObjJntSph_set3" Description="" Args="" />
+  <Function RAMDBGMQ="8005C050" RAMN0="8004A874" Source="" ShortName="" Description="Loads hitbox variable array to hitbox structure  (cylinder array) " Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) | a2 - actor instance | a3 - hitbox variable array " />
+  <Function RAMDBGMQ="8005C364" RAMN0="8004AB7C" Source="" ShortName="" Description="Initializes hitbox structure (cylinder)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance)" />
+  <Function RAMDBGMQ="8005C3AC" RAMN0="8004ABCC" Source="" ShortName="" Description="Unloads hitbox structure (cylinder)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct)" />
+  <Function RAMDBGMQ="8005C3F4" RAMN0="8004AC1C" Source="" ShortName="" Description="Loads hitbox variable array to hitbox structure (cylinder, 1 less argument)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) | a2 - hitbox variable array " />
+  <Function RAMDBGMQ="8005C450" RAMN0="8004AC84" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8005C4AC" RAMN0="8004ACEC" Source="" ShortName="" Description="Loads hitbox variable array to hitbox structure (cylinder)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) | a2 - actor instance | a3 - hitbox variable array" />
+  <Function RAMDBGMQ="8005C7E0" RAMN0="8004B064" Source="" ShortName="" Description="Initializes hitbox structure (tri array)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) " />
+  <Function RAMDBGMQ="8005C8C8" RAMN0="8004B148" Source="" ShortName="" Description="Possibly quad array unload" Args="" />
+  <Function RAMDBGMQ="8005CBAC" RAMN0="8004B3EC" Source="" ShortName="" Description="Loads hitbox variable array to hitbox structure (tri array)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) | a2 - actor instance | a3 - hitbox variable array" />
+  <Function RAMDBGMQ="8005D018" RAMN0="8004B858" Source="" ShortName="" Description="Initializes hitbox structure (quad)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) " />
+  <Function RAMDBGMQ="8005D060" RAMN0="8004B8A8" Source="" ShortName="" Description="Unloads hitbox structure (quad)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct)" />
+  <Function RAMDBGMQ="8005D104" RAMN0="8004B960" Source="" ShortName="" Description="Loads hitbox variable array to hitbox structure (quad)" Args="a0 - global context | a1 - actor instance + 0x???? (offset of hitbox struct in the instance) | a2 - hitbox variable array " />
+  <Function RAMDBGMQ="8005D79C" RAMN0="8004BD50" Source="/z_collision_check.c" ShortName="CollisionCheck_setAT" Description="Subscribe to collision pool 1, non-complex poly types | Called directly by actors" Args="A0 = Global Context | A1 = 801DA300 //collision body groups | A2 = Collision Body Ptr | V0 = 0 or -1 based on 801DA302 lowest bit?" />
+  <Function RAMDBGMQ="8005D9F4" RAMN0="8004BF40" Source="/z_collision_check.c" ShortName="CollisionCheck_setAC" Description="//Subscribe to collision pool 2, non-complex poly types | //Called directly by actors" Args="A0 = Global Context | A1 = 801DA300 //collision body groups | A2 = Collision Body Ptr | V0 = 0 or -1 based on 801DA302 lowest bit?" />
+  <Function RAMDBGMQ="8005DC4C" RAMN0="8004C130" Source="/z_collision_check.c" ShortName="CollisionCheck_setOT" Description="Subscribe to collision pool 3, non-complex poly types" Args="A0 = Global Context | A1 = 801DA300 //collision body groups | A2 = Collision Body Ptr | V0 = 0 or -1 based on 801DA302 lowest bit? | Called directly by actors" />
+  <Function RAMDBGMQ="80061ED4" RAMN0="80050344" Source="/z_collision_check.c" ShortName="" Description="initializes damage chart part of actor" Args="" Description2="//Actor 0095" />
+  <Function RAMDBGMQ="80061EFC" RAMN0="80050370" Source="/z_collision_check.c" ShortName="" Description="initializes damage chart part of actor" Args="" Description2="//Actor 0095" />
+  <Function RAMDBGMQ="800626DC" RAMN0="80050B00" Source="" ShortName="" Description="Move hitbox to actor position (cylinder)" Args="a0 - actor instance | a1 - actor instance + 0x???? 0x???? (offset of hitbox struct)" />
+  <Function RAMDBGMQ="80062734" RAMN0="80050B64" Source="" ShortName="" Description="Move hitbox (quad)" Args="A0 = actor instance + 0x???? (offset of hitbox struct)  | A1 = float pointA | A2 = float pointB | A3 = float pointC | SP+0x10 float pointD" />
+  <Function RAMDBGMQ="800627A0" RAMN0="80050BD4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800628A4" RAMN0="80050CE4" Source="" ShortName="" Description="Move hitbox? (cylinder array?)" Args="a0 = 0? | a1 - actor instance + 0x???? (offset of hitbox struct)" />
+  <Function RAMDBGMQ="80062CD4" RAMN0="80051124" Source="" ShortName="" Description="Metal sparks" Args="a0 - global context | a1 - position to spawn (float array)" />
+  <Function RAMDBGMQ="80062D60" RAMN0="800511B8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80062DF4" RAMN0="80051250" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800635D0" RAMN0="80051A34" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80064520" RAMN0="80052328" Source="" ShortName="" Description="Starts cutscene for link " Args="A0 - global context | A1 - global context + 0x1D64" />
+  <Function RAMDBGMQ="80064534" RAMN0="80052340" Source="" ShortName="" Description="Ends cutscene for link" Args="A0 - global context | A1 - global context + 0x1D64" />
+  <Function RAMDBGMQ="800693D8" RAMN0="80056F98" Source="/z_demo.c" ShortName="" Description="Set Cutscene Pointer" Args="A0 = Global Context | A1 = Segment Offset" Description2="Contains Disk Drive Hook" />
+  <Function RAMDBGMQ="800694A0" RAMN0="800570C0" Source="" ShortName="" Description="Draw Get Item" Args="A0 = Global Context | A1 = s16 Get Item Model Id (0 = Bottle)" />
+  <Function RAMDBGMQ="8006BAD8" RAMN0="80058FF8" Source="" ShortName="" Description="plays sound at position" Args="a0 - global context | a1 - actor instance + 0x24 (position array of the sound) | a2 - 0x3C (radius?) | a3 - sound ID" />
+  <Function RAMDBGMQ="8006C2B0" RAMN0="80059714" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006C318" RAMN0="8005977C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006C360" RAMN0="800597C0" Source="" ShortName="" Description="Get NPC Mask Reaction" Args="A0 = ? | A1 = ? | V0 = Lookup result" />
+  <Function RAMDBGMQ="8006C4A4" RAMN0="8005991C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006C85C" RAMN0="80059CB0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006C894" RAMN0="80059CE0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006C8C4" RAMN0="80059D18" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006D074" RAMN0="8005A474" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006DD9C" RAMN0="8005B00C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8006F93C" RAMN0="8005C690" Source="" ShortName="" Description="Compute Linear Tween" Args="A0 = s16 end frame | A1 = s16 start frame? | A2 = s16 current frame? | F2 = Value between 0.0 (current frame smaller than start frame) and 1.0 (current frame >= end frame)
+" />
+  <Function RAMDBGMQ="8006F9BC" RAMN0="8005C714" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80074CE8" RAMN0="80060CE8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800773A8" RAMN0="800631D8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800775CC" RAMN0="80063404" Source="" ShortName="" Description="Return s32 at 8011A5E8 (Event Days)" Args="V0 = s32 at 8011A5E8" />
+  <Function RAMDBGMQ="800775D8" RAMN0="80063414" Source="" ShortName="" Description="Zero s32 at 8011A5E8 (Event Days)" Args="" />
+  <Function RAMDBGMQ="800775F0" RAMN0="80063434" Source="" ShortName="" Description="Update Background Music" Args="A0 = s32? value to write to 8011B9DE" />
+  <Function RAMDBGMQ="80077624" RAMN0="80063474" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80077684" RAMN0="800634D4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800777E0" RAMN0="80063630" Source="" ShortName="" Description="memset byte" Args="A0 = Address | A1 = Size | A2 = u8 value" />
+  <Function RAMDBGMQ="80077834" RAMN0="80063684" Source="" ShortName="coss?" Description="Math, Get cosine of short rotation angle" Args="A0 = s16 rotation | F0 = cosine of A0" />
+  <Function RAMDBGMQ="80077870" RAMN0="800636C4" Source="" ShortName="sins?" Description="Math, Get sine of short rotation angle" Args="A0 = s16 rotation | F0 = sine of A0" />
+  <Function RAMDBGMQ="800778AC" RAMN0="80063704" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8007797C" RAMN0="800637D4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80077A00" RAMN0="8006385C" Source="" ShortName="" Description="Float aproximator" Args="a0 - actor instance + 0x0198 (offset of stored float) | a1 - float value (target float) | a2 - float value (increments or decrements result by this until it reaches the target float) | v0 - returns 0 if it hasn't reached it, 1 if it does" />
+  <Function RAMDBGMQ="80077AF8" RAMN0="80063958" Source="" ShortName="" Description="" Args="" Description2="i" />
+  <Function RAMDBGMQ="80077B58" RAMN0="800639B8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80077D90" RAMN0="80063BF0" Source="" ShortName="" Description="Generates random s16 number" Args="A0 = s16 Offset | A1 = s16 Range | V0 = s16 Result" Description2="Generates random integer between 0 and range (exclusive), and adds Offset" />
+  <Function RAMDBGMQ="80077E40" RAMN0="80063CAC" Source="" ShortName="Vec3f_Copy" Description="Copy Float Coordinates" Args="A0 = out vector3_f32* result | A1 = vector3_f32* source" />
+  <Function RAMDBGMQ="80077E5C" RAMN0="80063CCC" Source="" ShortName="Vec3f_CopyVec3s" Description="Convert s16 Coordinates to Float Coordinates" Args="A0 = out vector3_f32* result | A1 = vector3_s16* source" />
+  <Function RAMDBGMQ="80077E9C" RAMN0="80063D10" Source="" ShortName="Vec3f_Add" Description="Adds XYZ Float Coordinates" Args="A0 = Coord A ptr | A1 = Coord B ptr | A2 = Result ptr (A + B)" />
+  <Function RAMDBGMQ="80077ED0" RAMN0="80063D48" Source="" ShortName="Vec3f_Sub" Description="Calculates XYZ Difference Between Float Coordinates" Args="A0 = Coord A ptr | A1 = Coord B ptr | A2 = Result ptr (A - B)" />
+  <Function RAMDBGMQ="80077F04" RAMN0="80063D80" Source="" ShortName="" Description="Calculates XYZ Difference Between s16 Coordinates" Args="A0 = Result Float Coord ptr (A - B) | A1 = s16 coord A ptr | A2 = s16 coord B ptr" />
+  <Function RAMDBGMQ="80077F5C" RAMN0="80063DDC" Source="" ShortName="" Description="Multiply XYZ Float Coordinates By Scalar" Args="A0 = Coord ptr | A1 = Scalar Value" />
+  <Function RAMDBGMQ="80077F90" RAMN0="80063E18" Source="" ShortName="" Description="Calculates XYZ Distance Between Float Coordinates" Args="A0 = Coord A ptr | A1 = Coord B ptr | F0 = result" />
+  <Function RAMDBGMQ="80077FD0" RAMN0="80063E5C" Source="" ShortName="" Description="Calculates XYZ Distance Between Float Coordinates" Args="A0 = Coord A ptr | A1 = Coord B ptr | A2 = Result B - A ptr | F0 = Distance" />
+  <Function RAMDBGMQ="80078028" RAMN0="80063EB8" Source="" ShortName="" Description="Calculates XZ Distance Between Float Coordinates" Args="A0 = Coord A ptr | A1 = Coord B ptr | F0 = Result" />
+  <Function RAMDBGMQ="80078068" RAMN0="80063F00" Source="" ShortName="" Description="Calculates Arctan2 (X,Z) of two coordinates (A-B) | Wrapper for 800AA4F8" Args="A0 = Coord A ptr | A1 = Coord B ptr | V0 = s16 rotation" />
+  <Function RAMDBGMQ="8007809C" RAMN0="80063F34" Source="" ShortName="" Description="Calculates Arctan2 (distance(XZ), Y) of two coordinates | (A-B for Y coordinate)" Args="A0 = Coord A ptr | A1 = Coord B ptr | V0 = s16 rotation" />
+  <Function RAMDBGMQ="800780DC" RAMN0="80063F7C" Source="" ShortName="" Description="Instance Init, Initialize Variable Chain" Args="A0 = Actor Instance | A1 = Variable Initializer List ptr" />
+  <Function RAMDBGMQ="80078310" RAMN0="80064178" Source="" ShortName="" Description="unknown float func" Args="a0 - actor instance + xxxx (offset of the float that will change) | a1 - float | a2 - float  | a3 - float | 0x0010($sp) float" />
+  <Function RAMDBGMQ="8007841C" RAMN0="80064280" Source="" ShortName="" Description="smoothly aproximates a0 to a1, commonly used for smooth movement" Args="a0 - actor instance + xxxx (offset of the float that will change) | a1 - float where you want a0 to be aproximated to | a2 - float (amount?)a3 - float (smaller than a2)" />
+  <Function RAMDBGMQ="8007848C" RAMN0="800642F0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8007869C" RAMN0="80064508" Source="" ShortName="" Description="" Args="A0 = s16 Rotation Pointer (Y this pass) | A1 = s16 ? | A2 = ? | A3 = ?" />
+  <Function RAMDBGMQ="800787BC" RAMN0="80064624" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80078860" RAMN0="800646C8" Source="" ShortName="" Description="Copy u8[4] array" Args="A0 = Destination ptr | A1 = Source ptr" />
+  <Function RAMDBGMQ="80078884" RAMN0="800646F0" Source="" ShortName="" Description="Play SFX (limited set, identical to 80064738)" Args="A0 = SFX" />
+  <Function RAMDBGMQ="800788CC" RAMN0="80064738" Source="" ShortName="" Description="Play SFX (limited set, Identical to 800646F0)" Args="A0 = SFX" />
+  <Function RAMDBGMQ="80078914" RAMN0="80064780" Source="" ShortName="" Description="Play SFX (limited set)" Args="A0 = SFX" />
+  <Function RAMDBGMQ="80079D8C" RAMN0="80065BCC" Source="../z_lights.c" ShortName="" Description="Initialize Flame Light (Wrapper for 80065B70)" Args="" />
+  <Function RAMDBGMQ="80079DF0" RAMN0="80065C30" Source="../z_lights.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80079E58" RAMN0="80065C98" Source="../z_lights.c" ShortName="" Description="Initialize Flame Color" Args="A0 = Blue Fire Instance + 0x19C | A1 = byte Red (0x9B this pass) | A2 = byte Green (0xD2 this pass) | A3 = byte Blue | SP + 0x10 = short Alpha?" Description2="writes RGBA to A0 + 0x08 (note alpha is short) | Called by 80065B70" />
+  <Function RAMDBGMQ="8007A764" RAMN0="800665B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8007A7C4" RAMN0="80066610" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8007C25C" RAMN0="80067850" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8007C3F4" RAMN0="800679E8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800800F8" RAMN0="8006B6FC" Source="" ShortName="" Description="Enters cutscene mode and plays actor cutscene" Args="a0 - global context | a1 = actor cutscene ID | a2 = frame duration | a3 = actor | 0x10(sp) = ???" />
+  <Function RAMDBGMQ="800803F0" RAMN0="8006B9B4" Source="" ShortName="" Description="Camera related" Args="a0 - global context | a1 - s16 unknown" />
+  <Function RAMDBGMQ="80080480" RAMN0="8006BA10" Source="" ShortName="" Description="Enters cutscene mode and focuses the actor for a short time" Args="a0 - global context | a1 - actor instance" />
+  <Function RAMDBGMQ="800806BC" RAMN0="8006BB7C" Source="" ShortName="" Description="Enters cutscene mode and focuses the actor for a short time, playing a sound?" Args="a0 - global context | a1 - actor instance | a2 - sound ID?" />
+  <Function RAMDBGMQ="80080728" RAMN0="8006BBF4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800825E0" RAMN0="8006D8E0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800849EC" RAMN0="8006FAD0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80084BF4" RAMN0="8006FCB0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80084D10" RAMN0="8006FDCC" Source="" ShortName="" Description="Item Giving Routine" Args="A0 = Global Context | A1 = Item Index" Description2="one of them at least" />
+  <Function RAMDBGMQ="80086388" RAMN0="80071420" Source="" ShortName="" Description="? Check if player has item?" Args="A0 = Item Index | V0 = 0xFF if no Item?" />
+  <Function RAMDBGMQ="800869E4" RAMN0="800719E0" Source="" ShortName="" Description="Try Update Trade Quest Item |  (Egg -&gt; Chicken/Pocket Cucco, Ruto's Letter -&gt; Bottle)" Args="A0 = Global Context | A1 = Old Item Index | A2 = New Item Index | V0 = 1 if successful, 0 otherwise" />
+  <Function RAMDBGMQ="80086ABC" RAMN0="80071A94" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80086B2C" RAMN0="80071B04" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80086F00" RAMN0="80071E6C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008708C" RAMN0="80071FF8" Source="" ShortName="" Description="" Args="" Description2="ROM st: do_action_static" />
+  <Function RAMDBGMQ="80087174" RAMN0="800720BC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008730C" RAMN0="800721CC" Source="" ShortName="" Description="" Args="a0 rupees to substract" />
+  <Function RAMDBGMQ="80087330" RAMN0="800721F4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80087680" RAMN0="80072500" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800876C8" RAMN0="80072548" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80087708" RAMN0="80072588" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80088AA0" RAMN0="800738E8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80088B34" RAMN0="8007397C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008E4E0" RAMN0="80078F80" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008E520" RAMN0="80078FC4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008E60C" RAMN0="800790B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008E8DC" RAMN0="8007938C" Source="/z_player_lib.c" ShortName="" Description="Tests if Link is busy?" Args="A0 = Global Context | A1 = Link Instance | V0 = 1 if true, 0 if false" />
+  <Function RAMDBGMQ="8008E988" RAMN0="8007943C" Source="/z_player_lib.c" ShortName="" Description="Tests if Link is busy (Calls 8007938C, but also checks if talking?)" Args="A0 = Global Context | V0 = 1 if true, 0 if false" />
+  <Function RAMDBGMQ="8008EC04" RAMN0="800796C0" Source="/z_player_lib.c" ShortName="" Description="? Related to updating Child Link's state if Hylian Shield is equipped" Args="A0 = Link Instance | A1 = 1 if 800794B0 returns 1, else 0" />
+  <Function RAMDBGMQ="8008ED9C" RAMN0="80079854" Source="/z_player_lib.c" ShortName="" Description="Update Bottle Contents, Link's Action State | //Calls 80071B7C" Args="A0 = Global Context | A1 = Link Instance | A2 = Item Index (C-Item) | A3 = Action Parameter" />
+  <Function RAMDBGMQ="8008EEAC" RAMN0="80079968" Source="/z_player_lib.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008EF44" RAMN0="80079A04" Source="/z_player_lib.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008EF5C" RAMN0="80079A20" Source="/z_player_lib.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8008F034" RAMN0="80079AF8" Source="/z_player_lib.c" ShortName="" Description="Get Strength Upgrade Power Level" Args="V0 = 0 if no upgrades, Highest Upgrade if Adult, or 1 if Child and Upgrade > 0" />
+  <Function RAMDBGMQ="8008F080" RAMN0="80079B44" Source="/z_player_lib.c" ShortName="" Description="Get Link's Mask (Instance + 0x14F)" Args="A0 = Global Context | V0 = Id" />
+  <Function RAMDBGMQ="8008F08C" RAMN0="80079B54" Source="/z_player_lib.c" ShortName="" Description="Set Link's Mask (Instance + 0x14F)" Args="A0 = Global Context" />
+  <Function RAMDBGMQ="8008F098" RAMN0="80079B64" Source="/z_player_lib.c" ShortName="" Description="Test if Link is wearing the Mirror Shield (Instance + 0x13E)" Args="A0 = Global Context | V0 = 1 if true, 0 if false" />
+  <Function RAMDBGMQ="8008F104" RAMN0="80079BD4" Source="/z_player_lib.c" ShortName="" Description="Test if Link Item Action (Instance + 0x141) is Hookshot/Longshot" Args="A0 = Link Instance | V0 = 1 if true, 0 if false" />
+  <Function RAMDBGMQ="8008FCC8" RAMN0="8007A740" Source="/z_player_lib.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80090480" RAMN0="8007AF14" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80090D20" RAMN0="8007B734" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8009214C" RAMN0="8007CA54" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80092DAC" RAMN0="8007D668" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80092DF0" RAMN0="8007D6B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80092E70" RAMN0="8007D738" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80092F88" RAMN0="8007D85C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80093D18" RAMN0="8007E298" Source="/z_rcp.c" ShortName="" Description="Write Jump to Display List 800F8200 on POLY_OPA_DISP" Args="A0 = Graphics Context" Description2="" />
+  <Function RAMDBGMQ="80093D84" RAMN0="8007E2C0" Source="/z_rcp.c" ShortName="" Description="Write Jump to Display List 800F8200 on POLY_XLU_DISP" Args="A0 = Graphics Context" Description2="" />
+  <Function RAMDBGMQ="800943C8" RAMN0="8007E56C" Source="/z_rcp.c" ShortName="" Description="Write Jump to Display List 800F8440 on POLY_OPA_DISP" Args="A0 = Global Context" />
+  <Function RAMDBGMQ="80094F40" RAMN0="8007EB84" Source="/z_rcp.c" ShortName="" Description="Animate Tile |  | Generates G_SETTILESIZE commands at the tail end of the POLY_OPA dlist | //E8, F2, E8, F2, DF command sequence" Args="A0 = Graphics Context | A1 = ? (tile descriptor one?) | A2 = upper left S-axis | A3 = upper left T-axis | SP+0x10 = width (whole units) | SP+0x14 = height (whole units) | SP+0x18 = Tile Descriptor Two | SP+0x1C = upper left S-axis 2 | SP+0x20 = Upper left T-axis 2 | SP+0x24 = width (whole units) | SP+0x28 = height (whole units)" />
+  <Function RAMDBGMQ="8009728C" RAMN0="80080A3C" Source="room.c" ShortName="" Description="Load Room" Args="A0 = Global Context | A1 = Global Context + 0x11CBC (Room Context) | A2 = Room ID" />
+  <Function RAMDBGMQ="80097534" RAMN0="80080C98" Source="room.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8009812C" RAMN0="80081628" Source="room.c" ShortName="ObjectIndex" Description="Given its number, returns the object's index in the object table, or -1 if it isn't loaded." Args="" />
+  <Function RAMDBGMQ="80098188" RAMN0="80081688" Source="room.c" ShortName="" Description="Test if object file dependency is loaded" Args="A0 = Global Context + 0x117A4 (Object Allocation Table) | A1 = Actor Instance + 0x1E | V0 = 1 if loaded, 0 if not" />
+  <Function RAMDBGMQ="800A15C8" RAMN0="8008993C" Source="/z_skelanime.c" ShortName="" Description="Must be in draw even after initializing hirearchy without matrices" Args="" />
+  <Function RAMDBGMQ="800A1AC8" RAMN0="80089D8C" Source="" ShortName="" Description="Draw Matrix-Enabled Object" Args="A0 = Global Context | A1 = Hierarchy Limb Index (in Object File, in RAM) | A2 = Pointer to Actor Drawing Table | A3 = Number of Limbs that use display lists. | 0x0010(SP) = 0 | 0x0014(SP) = 0 | 0x0018(SP) = Actor Instance Address" />
+  <Function RAMDBGMQ="800A2000" RAMN0="8008A194" Source="" ShortName="" Description="Count Animation Frames" Args="A0 = Animation Pointer (in Object File) V0 = result" />
+  <Function RAMDBGMQ="800A2E70" RAMN0="8008AFB8" Source="/z_skelanime.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A3548" RAMN0="8008B698" Source="/z_skelanime.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A3620" RAMN0="8008B778" Source="/z_skelanime.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A457C" RAMN0="8008C684" Source="" ShortName="" Description="Initializes hirearchy without matrices" Args="a0 = Global Context | a1 = Actor Instance + 0x???? (offset to store data) | a2 = Hierarchy Pointer (In Object) | a3 = Animation Pointer (In Object)  0x10($sp) 0x14($sp) 0x18($sp)" />
+  <Function RAMDBGMQ="800A46F8" RAMN0="8008C788" Source="" ShortName="" Description="Initialize Matrix-Enabled Object with Animation" Args="a0 = Global Context | a1 = Actor Instance Address + 0x???? (Drawing Table) | a2 = Hierarchy Pointer (In Object) | a3 = Animation Pointer (In Object)" />
+  <Function RAMDBGMQ="800A49FC" RAMN0="8008C9C0" Source="" ShortName="" Description="Update Animation for Matrix-Enabled Object" Args="A0 = actor instance + 0x???? (Drawing Table) V0 = 1 if ?, else 0" />
+  <Function RAMDBGMQ="800A4FE4" RAMN0="8008CFC0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A51A0" RAMN0="8008D17C" Source="" ShortName="" Description="Change Animation" Args="A0 = actor instance + 0x???? (Drawing Table) | A1 = New Animation Pointer (in Object File) | A2 = Animation Speed (Floating Point) | A3 = ? | 0x0010(SP) = Number of Frames in Floating Point | 0x0014(SP) = some counter related to how long the animation should be played? | 0x0018(SP) = float transition rate, less than 1" />
+  <Function RAMDBGMQ="800A51E8" RAMN0="8008D1C4" Source="" ShortName="" Description="" Args="A0 = ? struct (Anju + 0x13C/ Archery Gerudo + 0x188) | A1 = Segment Offset" />
+  <Function RAMDBGMQ="800A5240" RAMN0="8008D21C" Source="" ShortName="" Description="Change Animation" Args="A0 = actor instance + 0x???? (Drawing Table) | A1 = Animation Pointer (in Object File) | A2 = float? | A3 = ?" />
+  <Function RAMDBGMQ="800A529C" RAMN0="8008D278" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A52F8" RAMN0="8008D2D4" Source="" ShortName="" Description="Change Animation" Args="A0 = actor instance + 0x???? (Drawing Table) | A1 = Animation Pointer (in Object File)" />
+  <Function RAMDBGMQ="800A534C" RAMN0="8008D328" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A5384" RAMN0="8008D360" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A5408" RAMN0="8008D3E4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A5428" RAMN0="8008D408" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A56C8" RAMN0="8008D6A8" Source="" ShortName="" Description="Checks if the animation is at specific frame" Args="a0 = animation struct | a1 = frame (float) | v0 = true/false" />
+  <Function RAMDBGMQ="800A56F0" RAMN0="8008D6D0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A6330" RAMN0="8008E1D4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A6360" RAMN0="8008E204" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A6408" RAMN0="8008E2AC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A663C" RAMN0="8008E4EC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A6888" RAMN0="8008E6BC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A6E10" RAMN0="8008EC20" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A6EF4" RAMN0="8008ED08" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A9CD4" RAMN0="800912C4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800A9F6C" RAMN0="8009151C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800AA000" RAMN0="800915CC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800AA148" RAMN0="80091730" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800AA278" RAMN0="80091858" Source="/z_view.c" ShortName="" Description="Initializes the VIEW variables" Args="A0 = VIEW struct ptr | A1 = Graphics Context ptr" />
+  <Function RAMDBGMQ="800AA358" RAMN0="80091918" Source="/z_view.c" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800AAA50" RAMN0="80091F94" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800B3840" RAMN0="80099620" Source="" ShortName="letterbox_target_addr" Description="sw A0, 800FE474($zero)" Args="" />
+  <Function RAMDBGMQ="800BC56C" RAMN0="8009A25C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800BFC84" RAMN0="8009CB08" Source="/z_play.c" ShortName="" Description="Call 8007943C if Global Context + 0x1D6C (cutscene play state) is 0" Args="A0 = Global Context | V0 = 1 if ?, else 0" />
+  <Function RAMDBGMQ="800C0230" RAMN0="8009D0F0" Source="" ShortName="" Description="Starts actor cutscene camera" Args="A0 - global context" />
+  <Function RAMDBGMQ="800C0314" RAMN0="8009D1AC" Source="" ShortName="" Description="Camera related, use after 800C0230" Args="A0 - global context | A1 - unknown, set to 0 | A2 - unknown, set to 1" />
+  <Function RAMDBGMQ="800C0384" RAMN0="8009D21C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C0438" RAMN0="8009D284" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C04A4" RAMN0="8009D2F0" Source="" ShortName="" Description="Cutscenes? Related to Cutscene Command 0x07" Args="A0 = Global Context | A1 = Cutscene Struct + 0x16" />
+  <Function RAMDBGMQ="800C04D8" RAMN0="8009D328" Source="" ShortName="" Description="Updates actor camera" Args="a0 - global context, a1 - set to 1 to update the camera , a2 - float array, focus, a3 - float array, origin" />
+  <Function RAMDBGMQ="800C05E4" RAMN0="8009D438" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C0704" RAMN0="8009D55C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C078C" RAMN0="8009D5F0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C0808" RAMN0="8009D66C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C08AC" RAMN0="8009D718" Source="" ShortName="" Description="Ends actor cutscene camera" Args="A0 - global context | A1 - unknown, set to 1" />
+  <Function RAMDBGMQ="800C0AF4" RAMN0="8009D94C" Source="" ShortName="" Description="Set Void, Grotto, Farore's Wind Checkpoint" Args="A0 = Global Context | A1 = Zoneout Type (0-2) | A2 = Link Spawn Variable" />
+  <Function RAMDBGMQ="800C0B60" RAMN0="8009D9B8" Source="" ShortName="" Description="Triggers a void out" Args="a0 - global context" />
+  <Function RAMDBGMQ="800C0C88" RAMN0="8009DAB0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C0CB8" RAMN0="8009DAE4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C0D28" RAMN0="8009DB54" Source="" ShortName="" Description="Check if Game Updates are Disabled" Args="V0 = 1 if Global Context + 0x7B8 > 0" />
+  <Function RAMDBGMQ="800C0DB4" RAMN0="8009DBE4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C0F08" RAMN0="8009DD44" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800C3770" RAMN0="8009FDEC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80001FF0" RAMN0="800A01B8" Source="" ShortName="" Description="Allocates to the tail end of the given heap (0x10 aligned)" Args="A0 = global context +0x74 | A1 = Size | V0 = ptr to free space" />
+  <Function RAMDBGMQ="800CA720" RAMN0="800A45FC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CA774" RAMN0="800A4650" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CAFEC" RAMN0="800A4EBC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB010" RAMN0="800A4EE0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB0C0" RAMN0="800A4F98" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB198" RAMN0="800A506C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB55C" RAMN0="800A5434" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB594" RAMN0="800A5470" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB600" RAMN0="800A54E4" Source="" ShortName="" Description="Return a^2 + b^2 + c^2" Args="A0 = pointer to float array | F0 = a^2 + b^2 + c^2" />
+  <Function RAMDBGMQ="800CB628" RAMN0="800A5510" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CB650" RAMN0="800A5538" Source="" ShortName="" Description="Compute Distance Squared" Args="A0 = pointer to float array (xyz) | A1 = pointer to float array | F0 = define A2 = (A0 - A1), return (A2.a)^2 + (A2.b)^2 + (A2.c)^2" />
+  <Function RAMDBGMQ="800CB678" RAMN0="800A5560" Source="" ShortName="" Description="Unknown" Args="a0 - actor instance + 0x24 (position array) | a1 - actor instance + 0x100 (pos4?)" />
+  <Function RAMDBGMQ="800CB7B4" RAMN0="800A56B8" Source="" ShortName="" Description="Unknown (something related to update rotation by velocity)" Args="a0 - 12 byte float array | a1 - actor instance + 0x5C (velocity) | a2 - $sp offset to store the results" />
+  <Function RAMDBGMQ="800CC824" RAMN0="800A6750" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CCB0C" RAMN0="800A69A4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CCF48" RAMN0="800A6D8C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CE15C" RAMN0="800A7FC8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800CE4B8" RAMN0="800A8334" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800D0664" RAMN0="800AA4F8" Source="" ShortName="" Description="Arctan2" Args="F12 = x | F14 = y | V0 = s16 Rotation" />
+  <Function RAMDBGMQ="800D07D4" RAMN0="800AA670" Source="" ShortName="" Description="" Args="" Description2="padding at func end" />
+  <Function RAMDBGMQ="800D0810" RAMN0="800AA6B0" Source="" ShortName="" Description="Allocates a 0x500 byte Float Matrix Stack | 80121200 stores start address, 80121204 stores top matrix" Args="A0 = Global Context" />
+  <Function RAMDBGMQ="800D084C" RAMN0="800AA6EC" Source="" ShortName="" Description="Clones the top level matrix in the Float Matrix Stack | (Increments Append Start by 0x40)" Args="" />
+  <Function RAMDBGMQ="800D0884" RAMN0="800AA724" Source="" ShortName="" Description="Pops top level matrix in the Float Matrix Stack" Args="" />
+  <Function RAMDBGMQ="800D08D8" RAMN0="800AA740" Source="" ShortName="" Description="Copies the top level matrix in the Float Matrix Stack" Args="A0 = Destination" />
+  <Function RAMDBGMQ="800D08FC" RAMN0="800AA764" Source="" ShortName="" Description="Overwrites top level matrix in the Float Matrix Stack" Args="A0 = Source Matrix" />
+  <Function RAMDBGMQ="800D0984" RAMN0="800AA7F4" Source="" ShortName="" Description="Create/Apply x,y,z transformation on Float Matrix Stack" Args="F12 = x | F14 = y | A2 = float z | A3 = 0 initializes new matrix, 1 transforms stored matrix" />
+  <Function RAMDBGMQ="800D0A8C" RAMN0="800AA8FC" Source="" ShortName="" Description="Create/Apply x,y,z scalar transformation on Float Matrix Stack" Args="F12 = x | F14 = y | A2 = float z | A3 = 0 initializes new matrix, 1 transforms stored matrix" />
+  <Function RAMDBGMQ="800D0B70" RAMN0="800AA9E0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800D0D20" RAMN0="800AAB94" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800D0ED4" RAMN0="800AAD4C" Source="" ShortName="" Description="Apply rotation transformation on float matrix?" Args="a1 = 1?" />
+  <Function RAMDBGMQ="800D1084" RAMN0="800AAF00" Source="" ShortName="" Description="Create/Apply x,y,z rotation transformation on Float Matrix Stack" Args="A0 = u16 x rotation | A1 = u16 y rotation | A2 = u16 z rotation | A3 = 0 initializes new matrix, 1 transforms stored matrix" />
+  <Function RAMDBGMQ="800D1694" RAMN0="800AB510" Source="" ShortName="" Description="Create x,y,z transformation and apply rotation on Float Matrix Stack" Args="F12 = float x | F14 = float y | A2 = float z | A3 = ptr to u16 rotation" />
+  <Function RAMDBGMQ="800D1A54" RAMN0="800AB8D8" Source="" ShortName="" Description="Converts the Top in the Float Matrix Stack to a fixed point matrix" Args="A0 = Destination for the Fixed Point Matrix" />
+  <Function RAMDBGMQ="800D1A88" RAMN0="800AB900" Source="" ShortName="" Description="Converts and Appends the Float Matrix Stack's top matrix to POLY_OPA_DISP end" Args="A0 = Graphics Context" />
+  <Function RAMDBGMQ="800D1AF4" RAMN0="800AB958" Source="" ShortName="" Description="Multiply Float Matrix Stack's top matrix by float Vector3" Args="A0 = ptr to Vector3 | A1 = ptr to result" />
+  <Function RAMDBGMQ="800D1BA8" RAMN0="800ABA10" Source="" ShortName="" Description="Float Matrix Copy" Args="A0 = Destination | A1 = Source" Description2="poorly optimized?" />
+  <Function RAMDBGMQ="800D20CC" RAMN0="800ABF50" Source="" ShortName="" Description="Used to reflect projectiles" Args="a0 = Link instance + 0x0A20 | a1 = place in stack to store result | a2 = 0? | returns half containing reflected direction at a1 + 0x2" />
+  <Function RAMDBGMQ="800D2264" RAMN0="800AC0E8" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800D23FC" RAMN0="800AC280" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80002130" RAMN0="99999999" Source="" ShortName="" Description="Debug print function" Args="a0 = text array | a1+ = args?" />
+  <Function RAMDBGMQ="800ED858" RAMN0="800C2C90" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800ED93C" RAMN0="800C2D74" Source="" ShortName="" Description="Song playback related." Args="" />
+  <Function RAMDBGMQ="800F3F3C" RAMN0="800C4C84" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F41E0" RAMN0="800C4F20" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F4254" RAMN0="800C4F94" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F436C" RAMN0="800C50AC" Source="" ShortName="" Description="Sound Loop?" Args="a0 = actor instance + E4 | a1 = sfx id | a2 = unknown float" />
+  <Function RAMDBGMQ="800F4414" RAMN0="800C5154" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F4524" RAMN0="800C5264" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F4634" RAMN0="800C5374" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F483C" RAMN0="800C557C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F4870" RAMN0="800C55B0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F4A54" RAMN0="800C5794" Source="" ShortName="" Description="Sound? Set u8 80121DFC to A0, u8 80121DFE to 1" Args="A0 = ?" />
+  <Function RAMDBGMQ="800F4BF4" RAMN0="800C5934" Source="" ShortName="" Description="Plays global sound with variable pitch" Args=" (a0 = 0x801333D4 (global context?) | a1 = SFX ID | a2 = pitch)" />
+  <Function RAMDBGMQ="800F4E30" RAMN0="800C5B70" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F50EC" RAMN0="800C5E2C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F52A0" RAMN0="800C5FE0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5504" RAMN0="800C6258" Source="" ShortName="" Description="Zero u32? 8010195C" Args="" />
+  <Function RAMDBGMQ="800F5718" RAMN0="800C646C" Source="" ShortName="" Description="Plays windmill music" Args="" />
+  <Function RAMDBGMQ="800F574C" RAMN0="800C64A0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5918" RAMN0="800C666C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5A58" RAMN0="800C67AC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5ACC" RAMN0="800C6820" Source="" ShortName="" Description="Change background music until enemies are defeated?" Args="a0 - music ID" />
+  <Function RAMDBGMQ="800F5B58" RAMN0="800C6894" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5BF0" RAMN0="800C692C" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5C2C" RAMN0="800C6968" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F5C64" RAMN0="800C69A0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F6584" RAMN0="800C72A4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F67A0" RAMN0="800C74C0" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F6828" RAMN0="800C7548" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F6FB4" RAMN0="800C7C90" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F7260" RAMN0="800C7F40" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F738C" RAMN0="800C806C" Source="" ShortName="" Description="Global Play Sfx?" Args="A0 = SFX ID | A1 = ? | A2 = ? | A3 = 80104394 this pass" />
+  <Function RAMDBGMQ="800F89E8" RAMN0="800C9568" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F8A44" RAMN0="800C95C4" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F8D04" RAMN0="800C9884" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800F8FF4" RAMN0="800C9B74" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="800FA00C" RAMN0="800CAA70" Source="" ShortName="" Description="Change background music" Args="a0 - music ID" />
+  <Function RAMDBGMQ="800FB3AC" RAMN0="800CBE58" Source="" ShortName="" Description="Set Debug Text RGBA color" Args="a0 - stack location, R, G, B, A" />
+  <Function RAMDBGMQ="800FB41C" RAMN0="800CBEC8" Source="" ShortName="" Description="Set Debug Text X Y" Args="a0 - stack location, X, Y" />
+  <Function RAMDBGMQ="800FBB8C" RAMN0="800CC4AC" Source="" ShortName="" Description="Initialize Debug Text Structure" Args="a0 - stack location" />
+  <Function RAMDBGMQ="800FBC14" RAMN0="800CC500" Source="" ShortName="" Description="Ending Debug Text stack 2?" Args="a0 - stack location" />
+  <Function RAMDBGMQ="800FBC1C" RAMN0="800CC508" Source="" ShortName="" Description="gfxprint_open (use after InitTxtStruct)" Args="a0 - stack location, a1 - graphic context +2C0" />
+  <Function RAMDBGMQ="800FBC64" RAMN0="800CC550" Source="" ShortName="" Description="Ending Debug Text stack?" Args="a0 - stack location" />
+  <Function RAMDBGMQ="800FBCB4" RAMN0="800CC588" Source="" ShortName="" Description="Set Debug Text String" Args="a0 - stack location, a1 - string to display, a2+ arguments" />
+  <Function RAMDBGMQ="800FD250" RAMN0="800CD76C" Source="" ShortName="" Description="" Args="F12 = ?  | F14 = SQRT(1 - F12^2) | F0 = result in radians. for convenience, they'll be reported in degrees" />
+  <Function RAMDBGMQ="800FD368" RAMN0="800CD890" Source="" ShortName="" Description="Wrapper for 800CD860 (subtracts result by 90 degrees)" Args="F12 = ? | F0 = radians" />
+  <Function RAMDBGMQ="800FD7B4" RAMN0="800CDB00" Source="" ShortName="" Description="Deallocates memory on main heap" Args="A0 = ptr to block to free (not the node)" />
+  <Function RAMDBGMQ="800FD9AC" RAMN0="800CDCCC" Source="" ShortName="Rand.Next() float" Description="Generates a random number between 0 inclusive and 1 exclusive" Args="F0 = returned value" />
+  <Function RAMDBGMQ="80100290" RAMN0="800CF470" Source="" ShortName="" Description="Performs some calculation on angle of view/2 (rad)" Args="F12 = Angle of View/2 in radians | F0 = return value"  />
+  <Function RAMDBGMQ="80104610" RAMN0="800D2CD0" Source="" ShortName="" Description="Performs some calculation on angle of view/2 (rad)" Args="12 = Angle of View/2 in radians | F0 = return value" />
+  <Function RAMDBGMQ="80106AA8" RAMN0="800D5FEC" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="80106BC8" RAMN0="800D6110" Source="" ShortName="" Description="Dialog Related, potentially confirm yes/no" Args="a0 = global context | V0 = button pressed" />
+  <Function RAMDBGMQ="80106CCC" RAMN0="800D6218" Source="" ShortName="" Description="" Args="" />
+  <Function RAMDBGMQ="8010B680" RAMN0="800DCE14" Source="" ShortName="" Description="Message display-related" Args="a0 = Global Context | a1 = Text Id | a2 = Z-Targeted? Actor" />
+  <Function RAMDBGMQ="8010B720" RAMN0="800DCE80" Source="" ShortName="" Description="Dialog yes/no response?" Args="a1 = Response Text ID" />
+  <Function RAMDBGMQ="8010BD58" RAMN0="800DD400" Source="" ShortName="" Description="Something related to song playback?" Args="" Description2="Jumps to 800DCF50" />
+  <Function RAMDBGMQ="8010BD88" RAMN0="800DD430" Source="" ShortName="" Description="Something related to song playback?" Args="" Description2="Jumps to 800DCF50" />
+  <Function RAMDBGMQ="8010BDBC" RAMN0="800DD464" Source="" ShortName="" Description="Check if link is talking" Args="A0 = global context + 0x20D8 (VIEW struct ptr)" />
+  <Function RAMDBGMQ="80093F34" RAMN0="99999999" Source="" ShortName="" Description="Used for appending stuff in the HUD?" Args="a0 - unk  | v0 - offset" />
+  <Function RAMDBGMQ="800846E0" RAMN0="8006F804" Source="" ShortName="" Description="Swap Link's Age Equipment" Args="(no args)" />
+  <Function RAMDBGMQ="8008ECAC" RAMN0="80079764" Source="" ShortName="" Description="Update Link Instance's Equipment" Args="A0 = Global Context | A1 = Link Instance" />
+  <Function RAMDBGMQ="800C69CC" RAMN0="99999999" Source="" ShortName="" Description="Allocates graphics memory" Args="a0 = graphics context  |  a1 = size" />
+  <Function RAMDBGMQ="80097C00" RAMN0="99999999" Source="" ShortName="" Description="Spawn object" Args="a0 = global context + 0x0117A4  |  a1 = object index" />
+</Table>
+
+<!-- 80027798  spawn particle -->
