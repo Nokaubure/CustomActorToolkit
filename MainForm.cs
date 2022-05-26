@@ -105,16 +105,6 @@ namespace CustomActorToolkit
 
             updater.StartMonitoring();
 
-            /*
-
-            if (Directory.Exists(@"gcc\mips64\include\z64ovl-master"))
-            {
-                if (Directory.Exists(@"gcc\mips64\include\z64ovl")) Directory.Delete(@"gcc\mips64\include\z64ovl", true);
-                Directory.Move(@"gcc\mips64\include\z64ovl-master", @"gcc\mips64\include\z64ovl");
-            }
-
-            */
-
             if (File.Exists("Settings.xml"))
             {
                 settings = IO.Import<Settings>("Settings.xml");
@@ -519,6 +509,8 @@ namespace CustomActorToolkit
 
                 Console.WriteLine(Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine);
 
+                File.WriteAllText(@".\mips32-elf-toolchain\bin\entry.ld", "ENTRY_POINT = 0x80800000;\n");
+
                 string flags = "";
                 if (ext.Contains("c"))
                 {
@@ -536,10 +528,10 @@ namespace CustomActorToolkit
 
                 string data = "";
 
-                data = "@echo off" + Environment.NewLine +
+                data = "rem @echo off" + Environment.NewLine +
                     @"cd .\mips32-elf-toolchain\bin\" + Environment.NewLine +
-                    @"mips32-elf-gcc " + flags + Filename + ext + "\"" + Environment.NewLine +
-                    @"mips32-elf-ld -o " + Filename + ".elf" + "\" \"" + ShortFilename + ".o\"" + @" -T z64-ovl.ld --emit-relocs" + Environment.NewLine +
+                    @"mips32-elf-gcc -I ..\..\z64ovl " + flags + Filename + ext + "\"" + Environment.NewLine +
+                    @"mips32-elf-ld -o " + Filename + ".elf" + "\" \"" + ShortFilename + ".o\"" + @" -T ..\..\z64ovl\z64ovl\z64ovl.ld --emit-relocs" + Environment.NewLine +
                     @"cd ..\..\" + Environment.NewLine +
                     objdump +
                     @"nOVL\novl -vv -c -A 0x" + ((ulong)(VRAM.Value)).ToString("X8") + " -o " + Filename + ".ovl" + "\" " + Filename + ".elf" + "\" " + Environment.NewLine +
@@ -2271,50 +2263,46 @@ namespace CustomActorToolkit
 
         private void downloadZ64ovlGithubToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!Directory.Exists(@"z64ovl"))
+                Directory.CreateDirectory(@"z64ovl");
 
             using (var client = new WebClient())
             {
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                client.DownloadFile("https://github.com/z64me/z64ovl_archived/archive/master.zip", "gcc\\mips64\\include\\z64ovl.zip");
-                if (Directory.Exists(@"gcc\mips64\include\z64ovl_archived-master"))
+                client.DownloadFile("https://github.com/z64me/z64ovl_archived/archive/master.zip", "z64ovl\\z64ovl.zip");
+                if (Directory.Exists(@"z64ovl\z64ovl_archived-master"))
                 {
-                    //Directory.Delete(@"gcc\mips64\include\z64ovl-master", true);
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C rmdir /Q /S gcc\\mips64\\include\\z64ovl_archived-master";
+                    startInfo.Arguments = "/C rmdir /Q /S z64ovl\\z64ovl_archived-master";
                     process.StartInfo = startInfo;
                     process.Start();
                 }
-                if (Directory.Exists(@"gcc\mips64\include\z64ovl"))
+                if (Directory.Exists(@"z64ovl\z64ovl"))
                 {
-                    //Directory.Delete(@"gcc\mips64\include\z64ovl-master", true);
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C rmdir /Q /S gcc\\mips64\\include\\z64ovl";
+                    startInfo.Arguments = "/C rmdir /Q /S z64ovl\\z64ovl";
                     process.StartInfo = startInfo;
                     process.Start();
                 }
 
-                while (Directory.Exists(@"gcc\mips64\include\z64ovl-master") || Directory.Exists(@"gcc\mips64\include\z64ovl"))
+                while (Directory.Exists(@"z64ovl\z64ovl-master") || Directory.Exists(@"z64ovl\z64ovl"))
                 {
                     // do nothing
                 }
 
-                using (var zip = ZipFile.Read("gcc\\mips64\\include\\z64ovl.zip"))
-                    zip.ExtractAll("gcc\\mips64\\include\\", ExtractExistingFileAction.Throw);
+                using (var zip = ZipFile.Read("z64ovl\\z64ovl.zip"))
+                    zip.ExtractAll("z64ovl\\", ExtractExistingFileAction.Throw);
                 
 
             }
-            //File.Delete("gcc\\mips64\\include\\z64ovl.zip");
-            //  Directory.Delete(@"gcc\mips64\include\z64ovl", true);
 
-            //  Directory.Move(@"gcc\mips64\include\z64ovl-master", @"gcc\mips64\include\z64ovl");
-
-            Directory.Move(@"gcc\mips64\include\z64ovl_archived-master", @"gcc\mips64\include\z64ovl");
+            Directory.Move(@"z64ovl\z64ovl_archived-master", @"z64ovl\z64ovl");
 
             MessageBox.Show("z64ovl Updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
            // downloadZ64ovlGithubToolStripMenuItem.Enabled = false;
@@ -2961,49 +2949,46 @@ namespace CustomActorToolkit
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            if (!Directory.Exists(@"z64ovl"))
+                Directory.CreateDirectory(@"z64ovl");
+
             using (var client = new WebClient())
             {
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                client.DownloadFile("https://github.com/z64me/z64ovl/archive/master.zip", "gcc\\mips64\\include\\z64ovl.zip");
-                if (Directory.Exists(@"gcc\mips64\include\z64ovl-master"))
+                client.DownloadFile("https://github.com/z64me/z64ovl/archive/master.zip", "z64ovl\\z64ovl.zip");
+                if (Directory.Exists(@"z64ovl\z64ovl-master"))
                 {
-                    //Directory.Delete(@"gcc\mips64\include\z64ovl-master", true);
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C rmdir /Q /S gcc\\mips64\\include\\z64ovl-master";
+                    startInfo.Arguments = "/C rmdir /Q /S z64ovl\\z64ovl-master";
                     process.StartInfo = startInfo;
                     process.Start();
                 }
-                if (Directory.Exists(@"gcc\mips64\include\z64ovl"))
+                if (Directory.Exists(@"z64ovl\z64ovl"))
                 {
-                    //Directory.Delete(@"gcc\mips64\include\z64ovl-master", true);
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C rmdir /Q /S gcc\\mips64\\include\\z64ovl";
+                    startInfo.Arguments = "/C rmdir /Q /S z64ovl\\z64ovl";
                     process.StartInfo = startInfo;
                     process.Start();
                 }
 
-                while(Directory.Exists(@"gcc\mips64\include\z64ovl-master") || Directory.Exists(@"gcc\mips64\include\z64ovl"))
+                while(Directory.Exists(@"z64ovl\z64ovl-master") || Directory.Exists(@"z64ovl\z64ovl"))
                 {
                     // do nothing
                 }
 
-                using (var zip = ZipFile.Read("gcc\\mips64\\include\\z64ovl.zip"))
-                    zip.ExtractAll("gcc\\mips64\\include\\", ExtractExistingFileAction.Throw);
+                using (var zip = ZipFile.Read("z64ovl\\z64ovl.zip"))
+                    zip.ExtractAll("z64ovl\\", ExtractExistingFileAction.Throw);
 
 
             }
-          //  File.Delete("gcc\\mips64\\include\\z64ovl.zip");
-            //  Directory.Delete(@"gcc\mips64\include\z64ovl", true);
 
-            //  Directory.Move(@"gcc\mips64\include\z64ovl-master", @"gcc\mips64\include\z64ovl");
-
-            Directory.Move(@"gcc\mips64\include\z64ovl-master", @"gcc\mips64\include\z64ovl");
+            Directory.Move(@"z64ovl\z64ovl-master", @"z64ovl\z64ovl");
 
             MessageBox.Show("z64ovl Updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             // downloadZ64ovlGithubToolStripMenuItem.Enabled = false;
@@ -3062,47 +3047,48 @@ namespace CustomActorToolkit
 
         private void Downloadz64hdr_Click(object sender, EventArgs e)
         {
+            var branch = "main-dev";
+            var url = "https://github.com/Dragorn421/z64hdr/archive/refs/heads/" + branch + ".zip";
+            var folderName = "z64hdr-" + branch;
 
             using (var client = new WebClient())
             {
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                client.DownloadFile("https://github.com/turpaan64/z64hdr/archive/refs/heads/main.zip", "gcc\\mips64\\include\\z64hdr.zip");
-                if (Directory.Exists(@"gcc\mips64\include\z64hdr-main"))
+                client.DownloadFile(url, "z64hdr.zip");
+                if (Directory.Exists(folderName))
                 {
-                    //Directory.Delete(@"gcc\mips64\include\z64ovl-master", true);
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C rmdir /Q /S gcc\\mips64\\include\\z64hdr-main";
+                    startInfo.Arguments = "/C rmdir /Q /S " + folderName;
                     process.StartInfo = startInfo;
                     process.Start();
                 }
-                if (Directory.Exists(@"gcc\mips64\include\z64hdr"))
+                if (Directory.Exists(@"z64hdr"))
                 {
-                    //Directory.Delete(@"gcc\mips64\include\z64ovl-master", true);
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C rmdir /Q /S gcc\\mips64\\include\\z64hdr";
+                    startInfo.Arguments = "/C rmdir /Q /S z64hdr";
                     process.StartInfo = startInfo;
                     process.Start();
                 }
 
-                while (Directory.Exists(@"gcc\mips64\include\z64hdr-main") || Directory.Exists(@"gcc\mips64\include\z64hdr"))
+                while (Directory.Exists(folderName) || Directory.Exists(@"z64hdr"))
                 {
                     // do nothing
                 }
 
-                using (var zip = ZipFile.Read("gcc\\mips64\\include\\z64hdr.zip"))
-                    zip.ExtractAll("gcc\\mips64\\include\\", ExtractExistingFileAction.Throw);
+                using (var zip = ZipFile.Read("z64hdr.zip"))
+                    zip.ExtractAll(".\\", ExtractExistingFileAction.Throw);
 
 
             }
 
 
-            Directory.Move(@"gcc\mips64\include\z64hdr-main", @"gcc\mips64\include\z64hdr");
+            Directory.Move(folderName, @"z64hdr");
 
             MessageBox.Show("z64hdr Updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
   
