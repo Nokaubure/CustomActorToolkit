@@ -624,6 +624,7 @@ namespace CustomActorToolkit
             pcmd.Arguments = @"/c compile_z64hdr.bat";
 
             pcmd.UseShellExecute = false;
+
             pcmd.RedirectStandardOutput = true;
             pcmd.RedirectStandardError = true;
 
@@ -647,28 +648,28 @@ namespace CustomActorToolkit
 
             cmd.Start();
 
-            // pipe script's stdout to CAT's console
+            // Write script's stdout/stderr to CAT's console
             cmd.OutputDataReceived += delegate (object _s, DataReceivedEventArgs dre)
             {
                 Console.WriteLine(dre.Data);
             };
+            cmd.ErrorDataReceived += delegate (object _s, DataReceivedEventArgs dre)
+            {
+                Console.WriteLine(dre.Data);
+            };
             cmd.BeginOutputReadLine();
+            cmd.BeginErrorReadLine();
 
             UpdateWindow();
         }
 
         private void compile_z64hdr_Exited(Process cmd)
         {
-            string stderr = cmd.StandardError.ReadToEnd();
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine(stderr);
-
             var overlayPathBin = OverlayPath.Substring(0, LastIndexOf(OverlayPath, ".")) + ".ovl";
 
             if (!File.Exists(overlayPathBin))
             {
-                MessageBox.Show("Something went wrong, better fix it before proceding.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something went wrong, better fix it before proceeding.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -682,7 +683,7 @@ namespace CustomActorToolkit
                         foundBssSizeSymbol = true;
                         bss = Convert.ToUInt32(textlines[i].Substring(0, 8), 16);
                     }
-                    if (textlines[i].Contains("initvars") || textlines[i].Contains("init_vars"))
+                    if (textlines[i].ToLower().Contains("initvars") || textlines[i].ToLower().Contains("init_vars"))
                     {
                         initvars = Convert.ToUInt32(textlines[i].Substring(0, 8), 16);
                     }
