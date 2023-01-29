@@ -1,0 +1,8 @@
+.vs/
+bin/
+obj/
+Makefile
+Atom/
+gcc/
+Overlays/
+nOVL/

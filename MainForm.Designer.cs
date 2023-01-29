@@ -33,10 +33,10 @@
             this.SetOverlayPathButton = new System.Windows.Forms.Button();
             this.CompileButton = new System.Windows.Forms.Button();
             this.OverlayLabel = new System.Windows.Forms.Label();
-            this.VRAM = new HexNumericUpdown();
             this.vramoffsetlabel = new System.Windows.Forms.Label();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.CompilePage = new System.Windows.Forms.TabPage();
+            this.TargetZ64hdr = new System.Windows.Forms.ComboBox();
             this.UseZ64hdr = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ActorAllocation = new System.Windows.Forms.NumericUpDown();
@@ -58,6 +58,7 @@
             this.ActorID = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.FindEmptyVRAMButton = new System.Windows.Forms.Button();
+            this.VRAM = new HexNumericUpdown();
             this.DecompilePage = new System.Windows.Forms.TabPage();
             this.SpecialOverlayLabel2 = new System.Windows.Forms.Label();
             this.DecompilingLabel = new System.Windows.Forms.Label();
@@ -117,13 +118,13 @@
             this.changeMipsCompileFlagsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chanceCCompileFlagsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.VRAM)).BeginInit();
             this.TabControl1.SuspendLayout();
             this.CompilePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorAllocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DMARow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InjectOffset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VRAM)).BeginInit();
             this.DecompilePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DecActorID)).BeginInit();
             this.ObjectsPage.SuspendLayout();
@@ -136,9 +137,9 @@
             // 
             // SetOverlayPathButton
             // 
-            this.SetOverlayPathButton.Location = new System.Drawing.Point(33, 16);
+            this.SetOverlayPathButton.Location = new System.Drawing.Point(32, 16);
             this.SetOverlayPathButton.Name = "SetOverlayPathButton";
-            this.SetOverlayPathButton.Size = new System.Drawing.Size(134, 23);
+            this.SetOverlayPathButton.Size = new System.Drawing.Size(103, 23);
             this.SetOverlayPathButton.TabIndex = 0;
             this.SetOverlayPathButton.Text = "Import Overlay (.S .c)";
             this.SetOverlayPathButton.UseVisualStyleBackColor = true;
@@ -146,9 +147,9 @@
             // 
             // CompileButton
             // 
-            this.CompileButton.Location = new System.Drawing.Point(68, 185);
+            this.CompileButton.Location = new System.Drawing.Point(32, 166);
             this.CompileButton.Name = "CompileButton";
-            this.CompileButton.Size = new System.Drawing.Size(92, 23);
+            this.CompileButton.Size = new System.Drawing.Size(103, 23);
             this.CompileButton.TabIndex = 1;
             this.CompileButton.Text = "Compile (nOVL)";
             this.CompileButton.UseVisualStyleBackColor = true;
@@ -157,39 +158,16 @@
             // OverlayLabel
             // 
             this.OverlayLabel.AutoSize = true;
-            this.OverlayLabel.Location = new System.Drawing.Point(173, 21);
+            this.OverlayLabel.Location = new System.Drawing.Point(152, 21);
             this.OverlayLabel.Name = "OverlayLabel";
             this.OverlayLabel.Size = new System.Drawing.Size(74, 13);
             this.OverlayLabel.TabIndex = 2;
             this.OverlayLabel.Text = "(Overlay Path)";
             // 
-            // VRAM
-            // 
-            this.VRAM.Hexadecimal = true;
-            this.VRAM.Increment = new decimal(new int[] {
-            16,
-            0,
-            0,
-            0});
-            this.VRAM.Location = new System.Drawing.Point(33, 146);
-            this.VRAM.Minimum = new decimal(new int[] {
-            -2147483648,
-            0,
-            0,
-            0});
-            this.VRAM.Name = "VRAM";
-            this.VRAM.Size = new System.Drawing.Size(92, 20);
-            this.VRAM.TabIndex = 3;
-            this.VRAM.Value = new decimal(new int[] {
-            -2139095040,
-            0,
-            0,
-            0});
-            // 
             // vramoffsetlabel
             // 
             this.vramoffsetlabel.AutoSize = true;
-            this.vramoffsetlabel.Location = new System.Drawing.Point(65, 118);
+            this.vramoffsetlabel.Location = new System.Drawing.Point(73, 103);
             this.vramoffsetlabel.Name = "vramoffsetlabel";
             this.vramoffsetlabel.Size = new System.Drawing.Size(153, 13);
             this.vramoffsetlabel.TabIndex = 4;
@@ -209,6 +187,7 @@
             // 
             // CompilePage
             // 
+            this.CompilePage.Controls.Add(this.TargetZ64hdr);
             this.CompilePage.Controls.Add(this.UseZ64hdr);
             this.CompilePage.Controls.Add(this.label7);
             this.CompilePage.Controls.Add(this.ActorAllocation);
@@ -243,20 +222,35 @@
             this.CompilePage.Text = "Compile";
             this.CompilePage.UseVisualStyleBackColor = true;
             // 
+            // TargetZ64hdr
+            // 
+            this.TargetZ64hdr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TargetZ64hdr.Enabled = false;
+            this.TargetZ64hdr.FormattingEnabled = true;
+            this.TargetZ64hdr.Items.AddRange(new object[] {
+            "oot_mq_debug",
+            "oot_u10"});
+            this.TargetZ64hdr.Location = new System.Drawing.Point(155, 193);
+            this.TargetZ64hdr.MaxDropDownItems = 2;
+            this.TargetZ64hdr.Name = "TargetZ64hdr";
+            this.TargetZ64hdr.Size = new System.Drawing.Size(104, 21);
+            this.TargetZ64hdr.TabIndex = 27;
+            // 
             // UseZ64hdr
             // 
             this.UseZ64hdr.AutoSize = true;
-            this.UseZ64hdr.Location = new System.Drawing.Point(169, 212);
+            this.UseZ64hdr.Location = new System.Drawing.Point(32, 196);
             this.UseZ64hdr.Name = "UseZ64hdr";
             this.UseZ64hdr.Size = new System.Drawing.Size(80, 17);
             this.UseZ64hdr.TabIndex = 26;
             this.UseZ64hdr.Text = "Use z64hdr";
             this.UseZ64hdr.UseVisualStyleBackColor = true;
+            this.UseZ64hdr.Click += new System.EventHandler(this.UseZ64hdr_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(48, 216);
+            this.label7.Location = new System.Drawing.Point(150, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 25;
@@ -265,14 +259,14 @@
             // ActorAllocation
             // 
             this.ActorAllocation.Hexadecimal = true;
-            this.ActorAllocation.Location = new System.Drawing.Point(107, 214);
+            this.ActorAllocation.Location = new System.Drawing.Point(208, 167);
             this.ActorAllocation.Maximum = new decimal(new int[] {
             2,
             0,
             0,
             0});
             this.ActorAllocation.Name = "ActorAllocation";
-            this.ActorAllocation.Size = new System.Drawing.Size(53, 20);
+            this.ActorAllocation.Size = new System.Drawing.Size(51, 20);
             this.ActorAllocation.TabIndex = 24;
             this.toolTip1.SetToolTip(this.ActorAllocation, "00 performs a \"low to high\" address allocation (high address volatility), unloadi" +
         "ng the overlay if no instances of that actor exist");
@@ -280,7 +274,7 @@
             // DMARowLabel
             // 
             this.DMARowLabel.AutoSize = true;
-            this.DMARowLabel.Location = new System.Drawing.Point(47, 328);
+            this.DMARowLabel.Location = new System.Drawing.Point(34, 319);
             this.DMARowLabel.Name = "DMARowLabel";
             this.DMARowLabel.Size = new System.Drawing.Size(74, 13);
             this.DMARowLabel.TabIndex = 23;
@@ -289,7 +283,7 @@
             // FindOriginalRowButton
             // 
             this.FindOriginalRowButton.Enabled = false;
-            this.FindOriginalRowButton.Location = new System.Drawing.Point(155, 323);
+            this.FindOriginalRowButton.Location = new System.Drawing.Point(155, 316);
             this.FindOriginalRowButton.Name = "FindOriginalRowButton";
             this.FindOriginalRowButton.Size = new System.Drawing.Size(104, 23);
             this.FindOriginalRowButton.TabIndex = 22;
@@ -299,21 +293,21 @@
             // 
             // DMARow
             // 
-            this.DMARow.Location = new System.Drawing.Point(45, 326);
+            this.DMARow.Location = new System.Drawing.Point(32, 317);
             this.DMARow.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.DMARow.Name = "DMARow";
-            this.DMARow.Size = new System.Drawing.Size(92, 20);
+            this.DMARow.Size = new System.Drawing.Size(103, 20);
             this.DMARow.TabIndex = 21;
             this.DMARow.ValueChanged += new System.EventHandler(this.DMARow_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(117, 300);
+            this.label2.Location = new System.Drawing.Point(109, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 20;
@@ -322,9 +316,9 @@
             // SendTozzrp
             // 
             this.SendTozzrp.Enabled = false;
-            this.SendTozzrp.Location = new System.Drawing.Point(155, 365);
+            this.SendTozzrp.Location = new System.Drawing.Point(155, 368);
             this.SendTozzrp.Name = "SendTozzrp";
-            this.SendTozzrp.Size = new System.Drawing.Size(92, 23);
+            this.SendTozzrp.Size = new System.Drawing.Size(104, 23);
             this.SendTozzrp.TabIndex = 19;
             this.SendTozzrp.Text = "Send to .zzrp";
             this.SendTozzrp.UseVisualStyleBackColor = true;
@@ -333,7 +327,7 @@
             // SpecialOverlayLabel
             // 
             this.SpecialOverlayLabel.AutoSize = true;
-            this.SpecialOverlayLabel.Location = new System.Drawing.Point(35, 85);
+            this.SpecialOverlayLabel.Location = new System.Drawing.Point(35, 70);
             this.SpecialOverlayLabel.Name = "SpecialOverlayLabel";
             this.SpecialOverlayLabel.Size = new System.Drawing.Size(27, 13);
             this.SpecialOverlayLabel.TabIndex = 18;
@@ -343,7 +337,7 @@
             // WarningCheckbox
             // 
             this.WarningCheckbox.AutoSize = true;
-            this.WarningCheckbox.Location = new System.Drawing.Point(169, 189);
+            this.WarningCheckbox.Location = new System.Drawing.Point(32, 219);
             this.WarningCheckbox.Name = "WarningCheckbox";
             this.WarningCheckbox.Size = new System.Drawing.Size(119, 17);
             this.WarningCheckbox.TabIndex = 9;
@@ -354,9 +348,9 @@
             // UpdateCRCButton
             // 
             this.UpdateCRCButton.Enabled = false;
-            this.UpdateCRCButton.Location = new System.Drawing.Point(155, 412);
+            this.UpdateCRCButton.Location = new System.Drawing.Point(155, 397);
             this.UpdateCRCButton.Name = "UpdateCRCButton";
-            this.UpdateCRCButton.Size = new System.Drawing.Size(92, 23);
+            this.UpdateCRCButton.Size = new System.Drawing.Size(104, 23);
             this.UpdateCRCButton.TabIndex = 17;
             this.UpdateCRCButton.Text = "Update CRC";
             this.UpdateCRCButton.UseVisualStyleBackColor = true;
@@ -365,7 +359,7 @@
             // FindEmptySpaceButton
             // 
             this.FindEmptySpaceButton.Enabled = false;
-            this.FindEmptySpaceButton.Location = new System.Drawing.Point(155, 269);
+            this.FindEmptySpaceButton.Location = new System.Drawing.Point(155, 265);
             this.FindEmptySpaceButton.Name = "FindEmptySpaceButton";
             this.FindEmptySpaceButton.Size = new System.Drawing.Size(104, 23);
             this.FindEmptySpaceButton.TabIndex = 15;
@@ -381,20 +375,20 @@
             0,
             0,
             0});
-            this.InjectOffset.Location = new System.Drawing.Point(45, 272);
+            this.InjectOffset.Location = new System.Drawing.Point(32, 266);
             this.InjectOffset.Maximum = new decimal(new int[] {
             67108864,
             0,
             0,
             0});
             this.InjectOffset.Name = "InjectOffset";
-            this.InjectOffset.Size = new System.Drawing.Size(92, 20);
+            this.InjectOffset.Size = new System.Drawing.Size(103, 20);
             this.InjectOffset.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(117, 246);
+            this.label4.Location = new System.Drawing.Point(115, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 13;
@@ -403,7 +397,7 @@
             // LaunchButton
             // 
             this.LaunchButton.Enabled = false;
-            this.LaunchButton.Location = new System.Drawing.Point(96, 451);
+            this.LaunchButton.Location = new System.Drawing.Point(100, 426);
             this.LaunchButton.Name = "LaunchButton";
             this.LaunchButton.Size = new System.Drawing.Size(92, 23);
             this.LaunchButton.TabIndex = 12;
@@ -414,9 +408,9 @@
             // ClearDmaButton
             // 
             this.ClearDmaButton.Enabled = false;
-            this.ClearDmaButton.Location = new System.Drawing.Point(43, 412);
+            this.ClearDmaButton.Location = new System.Drawing.Point(32, 397);
             this.ClearDmaButton.Name = "ClearDmaButton";
-            this.ClearDmaButton.Size = new System.Drawing.Size(92, 23);
+            this.ClearDmaButton.Size = new System.Drawing.Size(103, 23);
             this.ClearDmaButton.TabIndex = 11;
             this.ClearDmaButton.Text = "Clear dma table";
             this.ClearDmaButton.UseVisualStyleBackColor = true;
@@ -425,9 +419,9 @@
             // InjectButton
             // 
             this.InjectButton.Enabled = false;
-            this.InjectButton.Location = new System.Drawing.Point(43, 365);
+            this.InjectButton.Location = new System.Drawing.Point(32, 368);
             this.InjectButton.Name = "InjectButton";
-            this.InjectButton.Size = new System.Drawing.Size(92, 23);
+            this.InjectButton.Size = new System.Drawing.Size(103, 23);
             this.InjectButton.TabIndex = 10;
             this.InjectButton.Text = "Inject to ROM";
             this.InjectButton.UseVisualStyleBackColor = true;
@@ -436,9 +430,9 @@
             // FindEmptyActorIDButton
             // 
             this.FindEmptyActorIDButton.Enabled = false;
-            this.FindEmptyActorIDButton.Location = new System.Drawing.Point(143, 80);
+            this.FindEmptyActorIDButton.Location = new System.Drawing.Point(155, 66);
             this.FindEmptyActorIDButton.Name = "FindEmptyActorIDButton";
-            this.FindEmptyActorIDButton.Size = new System.Drawing.Size(117, 23);
+            this.FindEmptyActorIDButton.Size = new System.Drawing.Size(104, 23);
             this.FindEmptyActorIDButton.TabIndex = 8;
             this.FindEmptyActorIDButton.Text = "Find Empty Actor ID";
             this.FindEmptyActorIDButton.UseVisualStyleBackColor = true;
@@ -447,7 +441,7 @@
             // ActorID
             // 
             this.ActorID.Hexadecimal = true;
-            this.ActorID.Location = new System.Drawing.Point(33, 83);
+            this.ActorID.Location = new System.Drawing.Point(32, 66);
             this.ActorID.Maximum = new decimal(new int[] {
             999,
             0,
@@ -459,7 +453,7 @@
             0,
             -2147483648});
             this.ActorID.Name = "ActorID";
-            this.ActorID.Size = new System.Drawing.Size(92, 20);
+            this.ActorID.Size = new System.Drawing.Size(103, 20);
             this.ActorID.TabIndex = 7;
             this.ActorID.Value = new decimal(new int[] {
             1,
@@ -471,7 +465,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 55);
+            this.label3.Location = new System.Drawing.Point(86, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 13);
             this.label3.TabIndex = 6;
@@ -480,13 +474,36 @@
             // FindEmptyVRAMButton
             // 
             this.FindEmptyVRAMButton.Enabled = false;
-            this.FindEmptyVRAMButton.Location = new System.Drawing.Point(143, 143);
+            this.FindEmptyVRAMButton.Location = new System.Drawing.Point(155, 118);
             this.FindEmptyVRAMButton.Name = "FindEmptyVRAMButton";
             this.FindEmptyVRAMButton.Size = new System.Drawing.Size(104, 23);
             this.FindEmptyVRAMButton.TabIndex = 5;
             this.FindEmptyVRAMButton.Text = "Find Empty VRAM";
             this.FindEmptyVRAMButton.UseVisualStyleBackColor = true;
             this.FindEmptyVRAMButton.Click += new System.EventHandler(this.FindEmptyVRAMButton_Click);
+            // 
+            // VRAM
+            // 
+            this.VRAM.Hexadecimal = true;
+            this.VRAM.Increment = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.VRAM.Location = new System.Drawing.Point(32, 119);
+            this.VRAM.Minimum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            0});
+            this.VRAM.Name = "VRAM";
+            this.VRAM.Size = new System.Drawing.Size(103, 20);
+            this.VRAM.TabIndex = 3;
+            this.VRAM.Value = new decimal(new int[] {
+            -2139095040,
+            0,
+            0,
+            0});
             // 
             // DecompilePage
             // 
@@ -1082,14 +1099,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 556);
+            this.ClientSize = new System.Drawing.Size(329, 572);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "Custom Actor Toolkit 0.54";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.VRAM)).EndInit();
             this.TabControl1.ResumeLayout(false);
             this.CompilePage.ResumeLayout(false);
             this.CompilePage.PerformLayout();
@@ -1097,6 +1113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DMARow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InjectOffset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VRAM)).EndInit();
             this.DecompilePage.ResumeLayout(false);
             this.DecompilePage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DecActorID)).EndInit();
@@ -1203,6 +1220,7 @@
         private System.Windows.Forms.ToolStripMenuItem port10todebugactortoolstrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.CheckBox UseZ64hdr;
+        private System.Windows.Forms.ComboBox TargetZ64hdr;
     }
 }
 
