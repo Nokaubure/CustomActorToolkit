@@ -82,7 +82,6 @@ namespace CustomActorToolkit
         public static Settings settings = new Settings();
         public bool globalzzrpmode = false;
         public string zzrpglobalpath = "";
-        public string Z64hdrLinkerScript = "oot_mq_debug";
 
         public MainForm()
         {
@@ -96,6 +95,7 @@ namespace CustomActorToolkit
             CreateConsole();
             UpdateWindow();
             OverlayLabel.Text = "Open an overlay file";
+            TargetZ64hdr.SelectedItem = "oot_mq_debug";
 
             Log.Console = false;
             Log.Debug = false;
@@ -229,7 +229,7 @@ namespace CustomActorToolkit
                                             ActorDmaTableEnd = Convert.ToInt32(nodeAtt["ActorDmaTableEnd"].Value, 16);
                                             DmaTableStart = Convert.ToInt32(nodeAtt["DmaTableStart"].Value, 16);
                                             DmaTableEnd = Convert.ToInt32(nodeAtt["DmaTableEnd"].Value, 16);
-                                            Z64hdrLinkerScript = nodeAtt["z64hdr"].Value;
+                                            TargetZ64hdr.SelectedItem = nodeAtt["z64hdr"].Value;
                                             found = true;
                                             break;
                                         }
@@ -540,10 +540,10 @@ namespace CustomActorToolkit
                 {
                     data = "@echo off" + Environment.NewLine +
                     @"cd .\gcc\bin\" + Environment.NewLine +
-                    @"mips64-gcc -I ""../mips64/include/z64hdr"" -I ""../mips64/include/z64hdr/include"" " + flags + Filename + ext + "\"" + Environment.NewLine +
+                    @"mips64-gcc -I ""../mips64/include/z64hdr/" + TargetZ64hdr.SelectedItem +  @""" -I ""../mips64/include/z64hdr/include/"" " + flags + Filename + ext + "\"" + Environment.NewLine +
                     @"cd ..\mips64\include\z64hdr\" + Environment.NewLine +
                     @"copy ..\..\..\bin\conf.ld entry.ld" + Environment.NewLine +
-                    @"..\..\..\bin\mips64-ld -L """ + Directory.GetCurrentDirectory() + @"\gcc\mips64\include\z64hdr\common"" -L """ + Directory.GetCurrentDirectory() + @"\gcc\mips64\include\z64hdr\" + Z64hdrLinkerScript  + @""" -T """ + Z64hdrLinkerScript + @"/z64hdr.ld"" --emit-relocs -o " + Filename + ".elf" + "\" \"../../../bin/" + ShortFilename + ".o\"" + @" " + Environment.NewLine +
+                    @"..\..\..\bin\mips64-ld -L """ + Directory.GetCurrentDirectory() + @"\gcc\mips64\include\z64hdr\common"" -L """ + Directory.GetCurrentDirectory() + @"\gcc\mips64\include\z64hdr\" + TargetZ64hdr.SelectedItem  + @""" -T syms.ld -T z64hdr_actor.ld --emit-relocs -o " + Filename + ".elf" + "\" \"../../../bin/" + ShortFilename + ".o\"" + @" " + Environment.NewLine +
                     @"cd ..\..\..\..\" + Environment.NewLine +
                     objdump +
                     @"nOVL\novl -vv -c -A 0x" + ((ulong)(VRAM.Value)).ToString("X8") + " -o " + Filename + ".ovl" + "\" " + Filename + ".elf" + "\" " + Environment.NewLine +
@@ -3007,6 +3007,11 @@ namespace CustomActorToolkit
 
             MessageBox.Show("z64hdr Updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
   
+        }
+
+        private void UseZ64hdr_Click(object sender, EventArgs e)
+        {
+            TargetZ64hdr.Enabled = UseZ64hdr.Checked;
         }
     }
 
