@@ -150,7 +150,7 @@
             this.CompileButton.Name = "CompileButton";
             this.CompileButton.Size = new System.Drawing.Size(92, 23);
             this.CompileButton.TabIndex = 1;
-            this.CompileButton.Text = "Compile (nOVL)";
+            this.CompileButton.Text = "Compile";
             this.CompileButton.UseVisualStyleBackColor = true;
             this.CompileButton.Click += new System.EventHandler(this.CompileButton_Click);
             // 
